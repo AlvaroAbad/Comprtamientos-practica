@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Ugine">
+      <UniqueIdentifier>{0bbbc3e9-fc55-43a3-bd57-6b504245da36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\InputManager">
+      <UniqueIdentifier>{e9afb6e1-4eb8-40b4-89da-36a7aaa732b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GUI">
+      <UniqueIdentifier>{e4c270da-1d7b-4783-a909-0d6d94c92877}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\InputManager">
+      <UniqueIdentifier>{322d9269-a6db-45c5-a7ec-790aee4c646a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GUI">
+      <UniqueIdentifier>{ea568052-dcb1-49c4-9e96-3f38c8dba8eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Ugine">
+      <UniqueIdentifier>{7617001f-a9cf-44e5-928f-43b11a02f6bf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Ugine\include\audiostream.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\bone.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\bonedata.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\camera.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\circlecollision.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\collision.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\collisionmanager.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\collisionpixeldata.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\emitter.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\file.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\font.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\frame.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\glinclude.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\glyph.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\image.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\isometricmap.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\isometricscene.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\isometricsprite.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\listener.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\map.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\mapscene.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\math.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\parallaxscene.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\particle.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\pixelcollision.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\rectcollision.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\renderer.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\resourcemanager.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\scene.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\screen.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\skeletondata.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\skeletonsprite.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\sprite.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\stb_image_write.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\stb_truetype.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\string.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\types.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\u-gine.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\affector.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\array.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\audiobuffer.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\audioengine.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\audiosource.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\InputManager\include\event.h">
+      <Filter>Header Files\InputManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\InputManager\include\eventmanager.h">
+      <Filter>Header Files\InputManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\InputManager\include\eventmanagerinputdefinitions.h">
+      <Filter>Header Files\InputManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\InputManager\include\iregistrable.h">
+      <Filter>Header Files\InputManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\InputManager\include\keyboardcontroller.h">
+      <Filter>Header Files\InputManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\InputManager\include\managercontrolerInteface.h">
+      <Filter>Header Files\InputManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\InputManager\include\managergameinterface.h">
+      <Filter>Header Files\InputManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\InputManager\include\mousecontroller.h">
+      <Filter>Header Files\InputManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\InputManager\include\clic.h">
+      <Filter>Header Files\InputManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\InputManager\include\doubleclic.h">
+      <Filter>Header Files\InputManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\InputManager\include\drag.h">
+      <Filter>Header Files\InputManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\include\button.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\include\control.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\include\dragmessage.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\include\ieventlistener.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\include\message.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\include\mousebuttonclickmessage.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\include\mousebuttonpressedmessage.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\include\mousebuttonreleasedmessage.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\include\mousemovementmessage.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\include\window.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\lib\glfw.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\lib\rapidxml.hpp">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\lib\openal\AL\efx.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\lib\openal\AL\efx-creative.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\lib\openal\AL\efx-presets.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\lib\openal\AL\al.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\lib\openal\AL\alc.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\lib\openal\AL\alext.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\GUI\src\ieventlistener.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GUI\src\window.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GUI\src\button.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GUI\src\control.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\InputManager\src\clic.cpp">
+      <Filter>Source Files\InputManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\InputManager\src\doubleclic.cpp">
+      <Filter>Source Files\InputManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\InputManager\src\drag.cpp">
+      <Filter>Source Files\InputManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\InputManager\src\eventmanager.cpp">
+      <Filter>Source Files\InputManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\InputManager\src\keyboardcontroller.cpp">
+      <Filter>Source Files\InputManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\InputManager\src\managercontrolerInteface.cpp">
+      <Filter>Source Files\InputManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\InputManager\src\managergameinterface.cpp">
+      <Filter>Source Files\InputManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\InputManager\src\mousecontroller.cpp">
+      <Filter>Source Files\InputManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\src\camera.cpp">
+      <Filter>Source Files\Ugine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\src\collisionmanager.cpp">
+      <Filter>Source Files\Ugine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\src\collisionpixeldata.cpp">
+      <Filter>Source Files\Ugine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\src\emitter.cpp">
+      <Filter>Source Files\Ugine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\src\font.cpp">
+      <Filter>Source Files\Ugine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\src\Glyph.cpp">
+      <Filter>Source Files\Ugine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\src\image.cpp">
+      <Filter>Source Files\Ugine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\src\isometricmap.cpp">
+      <Filter>Source Files\Ugine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\src\isometricscene.cpp">
+      <Filter>Source Files\Ugine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\src\isometricsprite.cpp">
+      <Filter>Source Files\Ugine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\src\listener.cpp">
+      <Filter>Source Files\Ugine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\src\map.cpp">
+      <Filter>Source Files\Ugine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\src\mapscene.cpp">
+      <Filter>Source Files\Ugine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\src\math.cpp">
+      <Filter>Source Files\Ugine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\src\parallaxscene.cpp">
+      <Filter>Source Files\Ugine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\src\particle.cpp">
+      <Filter>Source Files\Ugine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\src\renderer.cpp">
+      <Filter>Source Files\Ugine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\src\resourcemanager.cpp">
+      <Filter>Source Files\Ugine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\src\scene.cpp">
+      <Filter>Source Files\Ugine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\src\screen.cpp">
+      <Filter>Source Files\Ugine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\src\skeletondata.cpp">
+      <Filter>Source Files\Ugine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\src\skeletonsprite.cpp">
+      <Filter>Source Files\Ugine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\src\sprite.cpp">
+      <Filter>Source Files\Ugine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\src\affector.cpp">
+      <Filter>Source Files\Ugine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\src\audiobuffer.cpp">
+      <Filter>Source Files\Ugine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\src\audioengine.cpp">
+      <Filter>Source Files\Ugine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\src\audiosource.cpp">
+      <Filter>Source Files\Ugine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\src\audiostream.cpp">
+      <Filter>Source Files\Ugine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\src\bone.cpp">
+      <Filter>Source Files\Ugine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\lib\stb_vorbis.c">
+      <Filter>Source Files\Ugine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\lib\stb_image.c">
+      <Filter>Source Files\Ugine</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
