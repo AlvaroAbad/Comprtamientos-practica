@@ -1,5 +1,5 @@
-#ifndef UGINE_MANAGERCONTROLLERINTERFACE_H
-#define UGINE_MANAGERCONTROLLERINTERFACE_H
+#ifndef INPUTMANAGER_MANAGERCONTROLLERINTERFACE_H
+#define INPUTMANAGER_MANAGERCONTROLLERINTERFACE_H
 namespace ManagerControlerInterface{
 	void setMousePosition(int x, int y);
 	void addMouseButtonDown(int button);
@@ -8,4 +8,4 @@ namespace ManagerControlerInterface{
 	void addKeyPressed(int button);
 	void addKeyReleased(int button);
 }
-#endif
+#endif //!INPUTMANAGER_MANAGERCONTROLLERINTERFACE_H

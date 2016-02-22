@@ -1,5 +1,5 @@
-#ifndef UGINE_KEYBORDCONTROLLER_H
-#define UGINE_KEYBORDCONTROLLER_H
+#ifndef INPUTMANAGER_KEYBORDCONTROLLER_H
+#define INPUTMANAGER_KEYBORDCONTROLLER_H
 class KeyBoardController
 {
 public:
@@ -10,4 +10,4 @@ public:
 private:
 
 };
-#endif
+#endif // !INPUTMANAGER_KEYBORDCONTROLLER_H

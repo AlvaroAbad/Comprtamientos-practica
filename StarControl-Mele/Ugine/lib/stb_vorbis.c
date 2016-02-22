@@ -100,7 +100,6 @@ extern "C" {
 // will occur from it as described above. Otherwise just pass NULL
 // to use malloc()/alloca()
 
-#pragma warning(disable: 4996)
 typedef struct
 {
    char *alloc_buffer;

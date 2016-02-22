@@ -1,5 +1,5 @@
-#ifndef UGINE_MOUSEMOVEMENTMESSAGE_H
-#define UGINE_MOUSEMOVEMENTMESSAGE_H
+#ifndef GUI_MOUSEMOVEMENTMESSAGE_H
+#define GUI_MOUSEMOVEMENTMESSAGE_H
 
 #include "message.h"
 class MouseMovementMessage: public Message
@@ -13,4 +13,4 @@ private:
 	float x, y;
 };
 
-#endif // !UGINE_MOUSEMOVEMENTMESSAGE_H
+#endif // !GUI_MOUSEMOVEMENTMESSAGE_H

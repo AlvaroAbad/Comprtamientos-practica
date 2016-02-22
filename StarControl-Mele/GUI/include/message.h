@@ -1,5 +1,5 @@
-#ifndef UGINE_MESSAGE_H
-#define UGINE_MESSAGE_H
+#ifndef GUI_MESSAGE_H
+#define GUI_MESSAGE_H
 
 class Message
 {
@@ -23,4 +23,4 @@ private:
 	MessageType type;
 };
 
-#endif // !UGINE_MESSAGE_H
+#endif // !GUI_MESSAGE_H

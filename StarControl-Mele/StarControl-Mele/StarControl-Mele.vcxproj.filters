@@ -258,6 +258,9 @@
     <ClInclude Include="..\GUI\include\menu.h">
       <Filter>Header Files\GUI</Filter>
     </ClInclude>
+    <ClInclude Include="include\externs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\GUI\src\ieventlistener.cpp">

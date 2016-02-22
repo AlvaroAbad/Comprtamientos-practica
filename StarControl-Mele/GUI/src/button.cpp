@@ -9,20 +9,37 @@ void Button::Update()
 
 void Button::Render()
 {
-	Renderer::Instance().DrawImage(currentImage, x, y, 0, width, height);
+	if (isPositionRelative) {
+		Renderer::Instance().DrawImage(currentImage, father->GetPositionX() + x, father->GetPositionY() + y, 0, width, height);
+	}
+	else {
+		Renderer::Instance().DrawImage(currentImage, x, y, 0, width, height);
+	}
+	
 }
 
 bool Button::OnInputEvent(const Message * message)
 {
+	double trueX, trueY;
+	trueX = x;
+	trueY = y;
+	if (isPositionRelative) {
+		trueX += father->GetPositionX();
+		trueY += father->GetPositionY();
+	}
 	bool used = false;
 	switch (message->GetType())
 	{
 	case Message::MOUSE_BUTTON_PRESS:
 	{
 		const MouseButtonPressedMessage * mousePressedButton = static_cast<const MouseButtonPressedMessage *>(message);
-		if (PointInRect(mousePressedButton->GetX(), mousePressedButton->GetY(), x, y, width, height)) {
+		if (PointInRect(mousePressedButton->GetX(), mousePressedButton->GetY(), trueX, trueY, width, height)) {
 			currentImage = pressedImage;
 			used = true;
+			for (uint32 i = 0; i < observers.Size(); i++)
+			{
+				observers[i]->OnClick(this);
+			}
 		}
 	}
 	break;
@@ -40,7 +57,7 @@ bool Button::OnInputEvent(const Message * message)
 		break;
 	case Message::MOUSE_MOVE:
 		const MouseMovementMessage * mouseMovement = static_cast<const MouseMovementMessage *>(message);
-		if (PointInRect(mouseMovement->GetX(), mouseMovement->GetY(), x, y, width, height)) {
+		if (PointInRect(mouseMovement->GetX(), mouseMovement->GetY(), trueX, trueY, width, height)) {
 			currentImage = hooverImage;
 		}
 		else {

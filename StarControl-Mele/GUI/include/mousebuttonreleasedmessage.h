@@ -1,5 +1,5 @@
-#ifndef UGINE_MOUSEBUTTONRELEASSEDMESSAGE_H
-#define UGINE_MOUSEBUTTONRELEASSEDMESSAGE_H
+#ifndef GUI_MOUSEBUTTONRELEASSEDMESSAGE_H
+#define GUI_MOUSEBUTTONRELEASSEDMESSAGE_H
 
 #include "message.h"
 class MouseButtonReleassedMessage : public Message
@@ -12,4 +12,4 @@ public:
 private:
 	float x, y;
 };
-#endif // !UGINE_MOUSEBUTTONRELEASSEDMESSAGE_H
+#endif // !GUI_MOUSEBUTTONRELEASSEDMESSAGE_H

@@ -1,5 +1,5 @@
-#ifndef UGINE_DRAGMESSAGE_H
-#define UGINE_DRAGMESSAGE_H
+#ifndef GUI_DRAGMESSAGE_H
+#define GUI_DRAGMESSAGE_H
 
 #include "message.h"
 class DragMessage : public Message
@@ -12,4 +12,4 @@ public:
 private:
 	float x, y;
 };
-#endif // !UGINE_DRAGMESSAGE_H
+#endif // !GUI_DRAGMESSAGE_H

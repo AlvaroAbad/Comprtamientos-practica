@@ -1,5 +1,5 @@
-#ifndef UGINE_MOUSEBUTTONPRESSEDMESSAGE_H
-#define UGINE_MOUSEBUTTONPRESSEDMESSAGE_H
+#ifndef GUI_MOUSEBUTTONPRESSEDMESSAGE_H
+#define GUI_MOUSEBUTTONPRESSEDMESSAGE_H
 
 #include "message.h"
 class MouseButtonPressedMessage : public Message
@@ -12,4 +12,4 @@ public:
 private:
 	float x, y;
 };
-#endif // !UGINE_MOUSEBUTTONPRESSEDMESSAGE_H
+#endif // !GUI_MOUSEBUTTONPRESSEDMESSAGE_H

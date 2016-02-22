@@ -1,5 +1,5 @@
-#ifndef UGINE_EVENT_H
-#define UGINE_EVENT_H
+#ifndef INPUTMANAGER_EVENT_H
+#define INPUTMANAGER_EVENT_H
 #define TIME_TO_SETTLE 0.1f
 #include "eventmanagerinputdefinitions.h"
 class Event {
@@ -34,4 +34,4 @@ private:
 	int mousePosX, mousePosY, mouseScrollPosition;
 	float TimeToSettle;
 };
-#endif
+#endif //!INPUTMANAGER_EVENT_H

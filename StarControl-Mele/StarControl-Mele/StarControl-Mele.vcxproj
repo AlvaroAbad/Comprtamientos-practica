@@ -224,6 +224,7 @@
     <ClInclude Include="..\Ugine\lib\rapidxml.hpp" />
     <ClInclude Include="include\appState.h" />
     <ClInclude Include="include\appstatemainmenu.h" />
+    <ClInclude Include="include\externs.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\GUI\src\button.cpp" />

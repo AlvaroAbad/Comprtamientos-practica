@@ -12,7 +12,12 @@ void Menu::Render()
 {
 	if (image) {
 		Renderer::Instance().SetBlendMode(Renderer::ALPHA);
-		Renderer::Instance().DrawImage(image, x, y, 0, width, height);
+		if (isPositionRelative) {
+			Renderer::Instance().DrawImage(image, father->GetPositionX() + x, father->GetPositionY() + y, 0, width, height);
+		}
+		else {
+			Renderer::Instance().DrawImage(image, x, y, 0, width, height);
+		}
 	}
 	for (int i = 0; i < childs.Size(); i++)
 	{
@@ -39,4 +44,12 @@ void Menu::Register(inputs key, inputs action)
 void Menu::Unregister(inputs key, inputs action)
 {
 	father->Unregister(key, action);
+}
+
+Menu::~Menu()
+{
+	for (uint32 i = 0; i < childs.Size(); i++)
+	{
+		delete childs[i];
+	}
 }

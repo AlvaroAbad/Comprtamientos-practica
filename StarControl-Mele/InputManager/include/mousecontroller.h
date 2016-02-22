@@ -1,5 +1,5 @@
-#ifndef UGINE_MOUSECONTROLLER_H
-#define UGINE_MOUSECONTROLLER_H
+#ifndef INPUTMANAGER_MOUSECONTROLLER_H
+#define INPUTMANAGER_MOUSECONTROLLER_H
 class MouseController
 {
 public:
@@ -12,4 +12,4 @@ public:
 private:
 
 };
-#endif
+#endif // !INPUTMANAGER_MOUSECONTROLLER_H

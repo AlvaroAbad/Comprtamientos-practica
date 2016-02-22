@@ -1,5 +1,5 @@
-#ifndef UGINE_EVENTMANAGER_H
-#define UGINE_EVENTMANAGER_H
+#ifndef INPUTMANAGER_EVENTMANAGER_H
+#define INPUTMANAGER_EVENTMANAGER_H
 #include "../../Ugine/include/array.h"
 #include "iregistrable.h"
 #include "eventmanagerinputdefinitions.h"
@@ -47,4 +47,4 @@ private:
 	Array<Observator> Observators;
 	Array<Event> processingEvents;
 };
-#endif
+#endif // !INPUTMANAGER_EVENTMANAGER_H

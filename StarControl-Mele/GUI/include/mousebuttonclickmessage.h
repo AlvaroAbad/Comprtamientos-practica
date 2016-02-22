@@ -1,5 +1,5 @@
-#ifndef UGINE_CLICKMESSAGE_H
-#define UGINE_CLICKMESSAGE_H
+#ifndef GUI_CLICKMESSAGE_H
+#define GUI_CLICKMESSAGE_H
 
 #include "message.h"
 class ClickMessage : public Message
@@ -12,4 +12,4 @@ public:
 private:
 	float x, y;
 };
-#endif // !UGINE_CLICKMESSAGE_H
+#endif // !GUI_CLICKMESSAGE_H

@@ -1,5 +1,5 @@
-#ifndef UGINE_IEVENTLISTENER_H
-#define UGINE_IEVENTLISTENER_H
+#ifndef GUI_IEVENTLISTENER_H
+#define GUI_IEVENTLISTENER_H
 
 class Control;
 class IEventListener
@@ -15,4 +15,4 @@ public:
 	virtual ~IEventListener();
 };
 
-#endif // !UGINE_IEVENTLISTENER_H
+#endif // !GUI_IEVENTLISTENER_H

@@ -1,5 +1,5 @@
-#ifndef UGINE_INPUTENUM_H
-#define UGINE_INPUTENUM_H
+#ifndef INPUTMANAGER_INPUTENUM_H
+#define INPUTMANAGER_INPUTENUM_H
 /*************************************************************************
 * Input handling definitions
 *************************************************************************/
@@ -128,4 +128,4 @@ enum inputs {
 	//JOYSTICK_16 = 15,
 	//JOYSTICK_LAST = JOYSTICK_16
 };
-#endif
+#endif // !INPUTMANAGER_INPUTENUM_H

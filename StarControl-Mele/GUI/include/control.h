@@ -1,14 +1,16 @@
-#ifndef UGINE_CONTROL_H
-#define UGINE_CONTROL_H
+#ifndef GUI_CONTROL_H
+#define GUI_CONTROL_H
 
 #include "../../InputManager/include/event.h"
 #include "../../Ugine/include/array.h"
 #include "ieventlistener.h"
 #include "../../InputManager/include/iregistrable.h"
 #include "message.h"
+#include "../../Ugine/include/string.h"
 class Control: public IRegistrable
 {
 public:
+
 	virtual void OnEvent(const Event * action);
 	void InjectMessage(const Message * message);
 	virtual void Update()=0;
@@ -16,14 +18,35 @@ public:
 	virtual bool OnInputEvent(const Message * message)=0;
 	void SetEventListener(IEventListener* eventListener) { this->eventListener = eventListener; }
 	void AddChild(Control * child);
-	Control();
+	void SetFocus() { hasFocus = true; }
+	void RemoveFocus() { hasFocus = false; }
+	bool HasFocus() { return hasFocus; }
+	void setPositionType(bool relative) { isPositionRelative = relative; }
+	virtual void SetPosition(double x, double y) {
+		this->x = x;
+		this->y = y;
+	}
+	virtual double GetPositionX() { return x; }
+	virtual double GetPositionY() { return y; }
+	virtual void SetDimensions(double width, double height) {
+		this->width = width;
+		this->height = height;
+	}
+	virtual double GetWidth() { return width; }
+	virtual double GetHeight() { return height; }
+	String * GetId() { return &id; }
+	Control(String id) :id(id) {}
 	virtual ~Control();
 
 protected:
 	Control * father;
 	Array<Control *> childs;
 	IEventListener* eventListener;
+	bool isPositionRelative;
 	bool hasFocus;
+	double x, y;
+	double width, height;
+	String id;
 };
-#endif // !UGINE_CONROL_H
+#endif // !GUI_CONROL_H
 

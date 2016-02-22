@@ -355,7 +355,7 @@ extern void stbi_install_YCbCr_to_RGB(stbi_YCbCr_to_RGB_run func);
 #else
    #define stbi_inline __forceinline
 #endif
-#pragma warning(disable:4996)
+
 
 // implementation:
 typedef unsigned char  uint8;

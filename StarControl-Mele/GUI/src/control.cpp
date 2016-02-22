@@ -60,10 +60,6 @@ void Control::AddChild(Control * child)
 	childs.Add(child);
 }
 
-Control::Control()
-{
-}
-
 Control::~Control()
 {
 }
