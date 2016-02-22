@@ -28,7 +28,7 @@ bool Button::OnInputEvent(const Message * message)
 	break;
 	case Message::MOUSE_BUTTON_RELEASE:
 		if (currentImage == pressedImage) {
-			currentImage = activeImage;
+			currentImage = hooverImage;
 			used = true;
 		}
 		break;

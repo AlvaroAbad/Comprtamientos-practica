@@ -12,6 +12,7 @@ void Window::Update()
 void Window::Render()
 {
 	if (image) {
+		Renderer::Instance().SetBlendMode(Renderer::SOLID);
 		Renderer::Instance().DrawImage(image, x, y, 0, width, height);
 	}
 	for (int i = 0; i < childs.Size(); i++)

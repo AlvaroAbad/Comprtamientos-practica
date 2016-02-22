@@ -10,6 +10,14 @@ public:
 	virtual bool OnInputEvent(const Message * message);
 	virtual void Register(inputs key, inputs action);
 	virtual void Unregister(inputs key, inputs action);
+	void SetPosition(double x, double y) {
+		this->x = x;
+		this->y = y;
+	}
+	void SetDimensions(double width, double height) {
+		this->width = width;
+		this->height = height;
+	}
 	Window(Image * image) : image(image) {}
 	~Window() {}
 

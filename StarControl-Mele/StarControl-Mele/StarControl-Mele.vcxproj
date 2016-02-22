@@ -153,6 +153,7 @@
     <ClInclude Include="..\GUI\include\control.h" />
     <ClInclude Include="..\GUI\include\dragmessage.h" />
     <ClInclude Include="..\GUI\include\ieventlistener.h" />
+    <ClInclude Include="..\GUI\include\menu.h" />
     <ClInclude Include="..\GUI\include\message.h" />
     <ClInclude Include="..\GUI\include\mousebuttonclickmessage.h" />
     <ClInclude Include="..\GUI\include\mousebuttonpressedmessage.h" />
@@ -222,19 +223,13 @@
     <ClInclude Include="..\Ugine\lib\openal\AL\efx.h" />
     <ClInclude Include="..\Ugine\lib\rapidxml.hpp" />
     <ClInclude Include="include\appState.h" />
-    <ClInclude Include="include\appState_game.h" />
-    <ClInclude Include="include\appState_menu.h" />
-    <ClInclude Include="include\appState_pause.h" />
-    <ClInclude Include="include\externs.h" />
-    <ClInclude Include="include\game.h" />
-    <ClInclude Include="include\lvlManager.h" />
-    <ClInclude Include="include\userinterface.h" />
-    <ClInclude Include="include\world.h" />
+    <ClInclude Include="include\appstatemainmenu.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\GUI\src\button.cpp" />
     <ClCompile Include="..\GUI\src\control.cpp" />
     <ClCompile Include="..\GUI\src\ieventlistener.cpp" />
+    <ClCompile Include="..\GUI\src\menu.cpp" />
     <ClCompile Include="..\GUI\src\window.cpp" />
     <ClCompile Include="..\InputManager\src\clic.cpp" />
     <ClCompile Include="..\InputManager\src\doubleclic.cpp" />
@@ -275,14 +270,8 @@
     <ClCompile Include="..\Ugine\src\skeletondata.cpp" />
     <ClCompile Include="..\Ugine\src\skeletonsprite.cpp" />
     <ClCompile Include="..\Ugine\src\sprite.cpp" />
-    <ClCompile Include="src\appState_game.cpp" />
-    <ClCompile Include="src\appState_menu.cpp" />
-    <ClCompile Include="src\appState_pause.cpp" />
-    <ClCompile Include="src\game.cpp" />
-    <ClCompile Include="src\lvlManager.cpp" />
+    <ClCompile Include="src\appstatemainmenu.cpp" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\userinterface.cpp" />
-    <ClCompile Include="src\world.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -36,5 +36,6 @@ private:
 	bool hasFocus;
 	double x, y;
 	double width, height;
+	String text;
 };
 #endif //!UGINE_BUTTON_H

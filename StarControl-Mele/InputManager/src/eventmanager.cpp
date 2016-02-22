@@ -46,6 +46,8 @@ void EventManager::addButtonReleased(int button)
 			return;
 		}
 	}
+	Event * newEvent = new Event((inputs)button, inputs::KEY_RELEASE, mousePosX, mousePosY, mouseScrollPosition);
+	processingEvents.Add(*newEvent);
 }
 
 void EventManager::SetMouseScrollPosition(int position)

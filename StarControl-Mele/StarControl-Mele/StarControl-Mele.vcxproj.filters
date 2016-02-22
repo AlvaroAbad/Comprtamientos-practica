@@ -252,29 +252,11 @@
     <ClInclude Include="include\appState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\appState_game.h">
+    <ClInclude Include="include\appstatemainmenu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\appState_menu.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\appState_pause.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\externs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\game.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\lvlManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\userinterface.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\world.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="..\GUI\include\menu.h">
+      <Filter>Header Files\GUI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -410,26 +392,11 @@
     <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\world.cpp">
+    <ClCompile Include="src\appstatemainmenu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\appState_game.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\appState_menu.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\appState_pause.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\game.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\lvlManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\userinterface.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\GUI\src\menu.cpp">
+      <Filter>Source Files\GUI</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

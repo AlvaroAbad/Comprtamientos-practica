@@ -1,25 +1,25 @@
 #include "../include/appState.h"
-#include "../include/appState_menu.h"
-#include "../include/appState_game.h"
-#include "../include/appState_pause.h"
+#include "../include/appstatemainmenu.h"
+
 #include "../../Ugine/include/screen.h"
 #include "../../Ugine/include/renderer.h"
 #include "../../Ugine/include/resourcemanager.h"
-#include "../include/game.h"
+#include "../../InputManager/include/keyboardcontroller.h"
+#include "../../InputManager/include/mousecontroller.h"
 AppState *currentState = nullptr;
 appStates whantedState = STATE_MENU;
-Game *game = nullptr;
+//Game *game = nullptr;
 AppState * newAppState(appStates state) {
 	switch (state)
 	{
 	case STATE_MENU:
-		return new AppStateMenu();
+		return new AppStateMainMenu();
 		break;
-	case STATE_GAME:
+	/*case STATE_GAME:
 		return new AppStateGame();
 		break;
 	case STATE_PAUSE:
-		return new AppStatePause();
+		return new AppStatePause();*/
 	case STATE_NULL:
 	default:
 		return nullptr;
@@ -28,6 +28,10 @@ AppState * newAppState(appStates state) {
 }
 int main(int, char*) {
 	Screen::Instance().Open(800, 600, false);
+	MouseController mouseControler;
+	mouseControler.Init();
+	KeyBoardController keybordControler;
+	keybordControler.Init();
 	while (whantedState) {
 		if (!currentState || currentState->getState() != whantedState) {
 			if (currentState) {
