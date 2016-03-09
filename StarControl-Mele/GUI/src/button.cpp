@@ -3,6 +3,8 @@
 #include "../../GUI/include/mousebuttonpressedmessage.h"
 #include "../../GUI/include/mousemovementmessage.h"
 #include "../../Ugine/include/math.h"
+#include "../../StarControl-Mele/include/resourcestore.h"
+#include "../../Ugine/include/ttffont.h"
 void Button::Update()
 {
 }
@@ -11,9 +13,11 @@ void Button::Render()
 {
 	if (isPositionRelative) {
 		Renderer::Instance().DrawImage(currentImage, father->GetPositionX() + x, father->GetPositionY() + y, 0, width, height);
+		ResoruceStore::Instance().GetMainFont()->Render(text, father->GetPositionX() + x + 10, father->GetPositionY() + y + height / 2);
 	}
 	else {
 		Renderer::Instance().DrawImage(currentImage, x, y, 0, width, height);
+		ResoruceStore::Instance().GetMainFont()->Render(text, x + 10, y + height /2);
 	}
 	
 }
@@ -36,10 +40,7 @@ bool Button::OnInputEvent(const Message * message)
 		if (PointInRect(mousePressedButton->GetX(), mousePressedButton->GetY(), trueX, trueY, width, height)) {
 			currentImage = pressedImage;
 			used = true;
-			for (uint32 i = 0; i < observers.Size(); i++)
-			{
-				observers[i]->OnClick(this);
-			}
+			eventListener->OnClick(this);
 		}
 	}
 	break;

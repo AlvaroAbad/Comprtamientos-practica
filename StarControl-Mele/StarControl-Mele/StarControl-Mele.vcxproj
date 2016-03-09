@@ -209,9 +209,9 @@
     <ClInclude Include="..\Ugine\include\skeletondata.h" />
     <ClInclude Include="..\Ugine\include\skeletonsprite.h" />
     <ClInclude Include="..\Ugine\include\sprite.h" />
-    <ClInclude Include="..\Ugine\include\stb_image_write.h" />
     <ClInclude Include="..\Ugine\include\stb_truetype.h" />
     <ClInclude Include="..\Ugine\include\string.h" />
+    <ClInclude Include="..\Ugine\include\ttffont.h" />
     <ClInclude Include="..\Ugine\include\types.h" />
     <ClInclude Include="..\Ugine\include\u-gine.h" />
     <ClInclude Include="..\Ugine\lib\glfw.h" />
@@ -224,7 +224,9 @@
     <ClInclude Include="..\Ugine\lib\rapidxml.hpp" />
     <ClInclude Include="include\appState.h" />
     <ClInclude Include="include\appstatemainmenu.h" />
+    <ClInclude Include="include\appstatepregamemenu.h" />
     <ClInclude Include="include\externs.h" />
+    <ClInclude Include="include\resourcestore.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\GUI\src\button.cpp" />
@@ -271,8 +273,10 @@
     <ClCompile Include="..\Ugine\src\skeletondata.cpp" />
     <ClCompile Include="..\Ugine\src\skeletonsprite.cpp" />
     <ClCompile Include="..\Ugine\src\sprite.cpp" />
+    <ClCompile Include="..\Ugine\src\ttffont.cpp" />
     <ClCompile Include="src\appstatemainmenu.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\resourcestore.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

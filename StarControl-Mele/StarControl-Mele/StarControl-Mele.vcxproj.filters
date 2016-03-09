@@ -132,9 +132,6 @@
     <ClInclude Include="..\Ugine\include\sprite.h">
       <Filter>Header Files\Ugine</Filter>
     </ClInclude>
-    <ClInclude Include="..\Ugine\include\stb_image_write.h">
-      <Filter>Header Files\Ugine</Filter>
-    </ClInclude>
     <ClInclude Include="..\Ugine\include\stb_truetype.h">
       <Filter>Header Files\Ugine</Filter>
     </ClInclude>
@@ -259,6 +256,15 @@
       <Filter>Header Files\GUI</Filter>
     </ClInclude>
     <ClInclude Include="include\externs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\resourcestore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ugine\include\ttffont.h">
+      <Filter>Header Files\Ugine</Filter>
+    </ClInclude>
+    <ClInclude Include="include\appstatepregamemenu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -400,6 +406,12 @@
     </ClCompile>
     <ClCompile Include="..\GUI\src\menu.cpp">
       <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\resourcestore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ugine\src\ttffont.cpp">
+      <Filter>Source Files\Ugine</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

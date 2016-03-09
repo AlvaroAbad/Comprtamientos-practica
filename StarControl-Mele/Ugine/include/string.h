@@ -2,7 +2,6 @@
 #define UGINE_STRING_H
 
 #pragma warning(disable:4996)
-
 #include "array.h"
 #include <ctype.h>
 #include <stdio.h>

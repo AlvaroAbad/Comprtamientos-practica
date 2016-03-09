@@ -1,3 +1,4 @@
+
 #include "../include/image.h"
 #include "../include/glinclude.h"
 #include "../include/math.h"
@@ -53,6 +54,21 @@ Image::Image(const String &filename, uint16 hframes, uint16 vframes) {
 		}
 
 	}
+}
+
+Image::Image(uint8 * buffer, uint16 width, uint16 height, uint16 hframes, uint16 vframes)
+{
+	this->filename = "";
+	this->hframes = hframes;
+	this->vframes = vframes;
+	this->width = width;
+	this->height = height;
+	handlex = 0;
+	handley = 0;
+	gltex = 0;
+	lastU = 1.0;
+	lastV = 1.0;
+	gltex = Renderer::Instance().GenImage(buffer, width, height);
 }
 
 	Image::~Image() {

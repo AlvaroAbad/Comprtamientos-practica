@@ -39,30 +39,32 @@ void AppStateMainMenu::activate()
 	window->SetPosition(0, 0);
 	window->SetDimensions(width, height);
 
-	Menu * menu = new Menu("mMain",menuImg);
+	Menu * menu = new Menu("mMain", menuImg);
 	menu->setPositionType(true);
 	menu->SetPosition(width / 2 - (menuImg->GetWidth() / 2), height / 2 - menuImg->GetHeight() / 2);
 	menu->SetDimensions(menuImg->GetWidth(), menuImg->GetHeight());
 
-	Button * buttonStart = new Button("btnStart",buttonImg, buttonPressImg, buttonDisabledImg, buttonHooverImg);
+	Button * buttonStart = new Button("btnStart", buttonImg, buttonPressImg, buttonHooverImg, buttonDisabledImg);
 	buttonStart->setPositionType(true);
 	buttonStart->SetPosition(10, 50);
 	buttonStart->SetDimensions(menuImg->GetWidth() - 20, (menuImg->GetHeight() - 100) / 3);
+	buttonStart->SetText("Start");
 	menu->AddChild(buttonStart);
-	
-	Button * buttonOpc = new Button("btnOpt", buttonImg, buttonPressImg, buttonDisabledImg, buttonHooverImg);
-	buttonOpc->setPositionType(true);
-	buttonOpc->SetPosition(10,  60 + (menuImg->GetHeight() - 100) / 3);
-	buttonOpc->SetDimensions(menuImg->GetWidth() - 20, (menuImg->GetHeight() - 100) / 3);
-	menu->AddChild(buttonOpc);
-	
-	Button * buttonExit = new Button("btnExit", buttonImg, buttonPressImg, buttonDisabledImg, buttonHooverImg);
-	buttonExit->setPositionType(true);
-	buttonExit->SetPosition(10, 70+((menuImg->GetHeight() - 100) / 3)*2);
-	buttonExit->SetDimensions(menuImg->GetWidth() - 20, (menuImg->GetHeight() - 100) / 3);
 
+	Button * buttonOpc = new Button("btnOpt", buttonImg, buttonPressImg, buttonHooverImg, buttonDisabledImg);
+	buttonOpc->setPositionType(true);
+	buttonOpc->SetPosition(10, 60 + (menuImg->GetHeight() - 100) / 3);
+	buttonOpc->SetDimensions(menuImg->GetWidth() - 20, (menuImg->GetHeight() - 100) / 3);
+	buttonOpc->SetText("Options");
+	menu->AddChild(buttonOpc);
+
+	Button * buttonExit = new Button("btnExit", buttonImg, buttonPressImg, buttonHooverImg, buttonDisabledImg);
+	buttonExit->setPositionType(true);
+	buttonExit->SetPosition(10, 70 + ((menuImg->GetHeight() - 100) / 3) * 2);
+	buttonExit->SetDimensions(menuImg->GetWidth() - 20, (menuImg->GetHeight() - 100) / 3);
+	buttonExit->SetText("Exit");
 	menu->AddChild(buttonExit);
-	
+
 	window->AddChild(menu);
 
 	buttonStart->Register(inputs::MOUSE_BUTTON_LEFT, inputs::KEY_PRESS);
@@ -77,17 +79,23 @@ void AppStateMainMenu::activate()
 	buttonOpc->Register(inputs::KEY_UNKNOWN, inputs::MOUSE_MOVEMENT);
 	buttonExit->Register(inputs::KEY_UNKNOWN, inputs::MOUSE_MOVEMENT);
 
-	buttonExit->RegisterObserver(this);
+	buttonStart->SetEventListener(this);
+	buttonOpc->SetEventListener(this);
+	buttonExit->SetEventListener(this);
 }
 
 void AppStateMainMenu::deactivate()
 {
-	
+
 }
 
 void AppStateMainMenu::OnClick(Control * sender)
 {
-	if (*(sender->GetId())=="btnExit") {
+	if (*(sender->GetId()) == "btnExit") {
 		whantedState = STATE_NULL;
+	}else if (*(sender->GetId()) == "btnOpt") {
+		whantedState = STATE_OPTIONS;
+	}else if (*(sender->GetId()) == "btnStart") {
+		whantedState = STATE_PREGAMEMENU;
 	}
 }

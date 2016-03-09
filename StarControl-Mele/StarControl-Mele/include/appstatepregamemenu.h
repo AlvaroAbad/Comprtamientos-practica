@@ -3,14 +3,14 @@
 
 #include "appState.h"
 #include "../../GUI/include/window.h"
-class AppStateMainMenu:public AppState, IEventListener
+class AppStatePreGameMenu :public AppState, IEventListener
 {
 public:
-	AppStateMainMenu() {
-		this->setState(STATE_MAINMENU);
+	AppStatePreGameMenu() {
+		this->setState(STATE_PREGAMEMENU);
 		window = nullptr;
 	};
-	~AppStateMainMenu() { delete window; };
+	~AppStatePreGameMenu() { delete window; };
 	void virtual run();
 	void virtual draw() const;
 	void virtual getInputs();
@@ -22,4 +22,3 @@ private:
 };
 
 #endif // !SCM_MAINMENU_H
-

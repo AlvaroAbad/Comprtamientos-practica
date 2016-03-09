@@ -141,7 +141,34 @@ void Renderer::DrawImage(const Image* image, double x, double y, uint32 frame, d
 	glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 	glPopMatrix();
 }
+void Renderer::DrawImage(const Image* image, double x, double y, double imageX, double imageY, double width, double height, double ang) const {
 
+	uint32 row = imageY ;
+	uint32 column = imageX;
+	GLdouble handlexscale = width / image->GetWidth();
+	GLdouble handleyscale = height / image->GetHeight();
+	GLdouble ustep = image->GetLastU() / image->GetWidth();
+	GLdouble vstep = image->GetLastV() / image->GetHeight();
+	GLdouble ubegin = ustep*column;
+	GLdouble vbegin = vstep*row;
+	GLdouble uend = ubegin + width*ustep;
+	GLdouble vend = vbegin + height*vstep;
+	GLdouble x0 = -(image->GetHandleX()*handlexscale);
+	GLdouble y0 = -(image->GetHandleY()*handleyscale);
+	GLdouble x1 = -(image->GetHandleX()*handlexscale) + width;
+	GLdouble y1 = -(image->GetHandleY()*handleyscale) + height;
+	GLdouble vertices[] = { x0, y0, x1, y0, x0, y1, x1, y1 };
+	GLdouble texCoords[] = { ubegin, vbegin, uend, vbegin, ubegin, vend, uend, vend };
+
+	glPushMatrix();
+	glTranslated(x, y, 0);
+	glRotated(ang, 0, 0, -1);
+	image->Bind();
+	glVertexPointer(2, GL_DOUBLE, 0, vertices);
+	glTexCoordPointer(2, GL_DOUBLE, 0, texCoords);
+	glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+	glPopMatrix();
+}
 void Renderer::PushMatrix() const {
 	glPushMatrix();
 }

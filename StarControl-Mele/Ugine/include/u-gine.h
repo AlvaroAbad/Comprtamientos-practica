@@ -25,17 +25,12 @@
 #include "sprite.h"
 #include "string.h"
 #include "types.h"
+#include "ttffont.h"
 /*AUDIO INCLUDES*/
 #include "audiobuffer.h"
 #include "audioengine.h"
 #include "audiosource.h"
 #include "listener.h"
 #include "audiostream.h"
-/*USERINPUT INCLUDES*/
-#include "InputManager/keyboardcontroller.h"
-#include "InputManager/mousecontroller.h"
-#include "InputManager/eventmanager.h"
-/*GUI INCLUDES*/
-#include "GUI\window.h"
-#include "GUI\button.h"
+
 #endif

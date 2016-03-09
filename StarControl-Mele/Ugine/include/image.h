@@ -7,6 +7,7 @@
 class Image {
 public:
     Image(const String& filename, uint16 hframes = 1, uint16 vframes = 1);
+	Image(uint8 * buffer, uint16 width, uint16 height, uint16 hframes = 1, uint16 vframes = 1);
 	virtual ~Image();
 
     virtual bool IsValid() const { return gltex != 0; }

@@ -15,10 +15,10 @@ AppState * newAppState(appStates state) {
 	case STATE_MENU:
 		return new AppStateMainMenu();
 		break;
-	/*case STATE_GAME:
+	case STATE_GAME:
 		return new AppStateGame();
 		break;
-	case STATE_PAUSE:
+	/*case STATE_PAUSE:
 		return new AppStatePause();*/
 	case STATE_NULL:
 	default:

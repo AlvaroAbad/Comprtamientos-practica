@@ -51,6 +51,25 @@ Font* ResourceManager::LoadFont(const String &filename) {
 	}
 }
 
+TTFFont * ResourceManager::LoadTTFFont(const String& filename, uint32 size)
+{
+	// Comprobamos si esta cargada
+	for (uint32 i = 0; i < ttfFonts.Size(); i++)
+		if (ttfFonts[i]->GetFilename() == filename && ttfFonts[i]->GetSize()==size)
+			return ttfFonts[i];
+
+	// Cargamos
+	TTFFont* ttfFont = new TTFFont(filename, size);
+	if (ttfFont->IsValid()) {
+		ttfFonts.Add(ttfFont);
+		return ttfFont;
+	}
+	else {
+		delete ttfFont;
+		return NULL;
+	}
+}
+
 
 Image* ResourceManager::LoadImage(const String &filename, uint16 hframes, uint16 vframes) {
 	// Comprobamos si esta cargada
@@ -110,6 +129,13 @@ void ResourceManager::FreeFonts() {
     fonts.Clear();
 }
 
+void ResourceManager::FreeTTFFonts()
+{
+	for (uint32 i = 0; i < ttfFonts.Size(); i++)
+		delete ttfFonts[i];
+	ttfFonts.Clear();
+}
+
 
 void ResourceManager::FreeImages() {
     for ( uint32 i = 0; i < images.Size(); i++ )
@@ -140,6 +166,7 @@ void ResourceManager::FreeIsometricMaps() {
 void ResourceManager::FreeResources() {
 	FreeCollisionPixelDatas();
 	FreeFonts();
+	FreeTTFFonts();
 	FreeImages();
 	FreeMaps();
 	FreeIsometricMaps();

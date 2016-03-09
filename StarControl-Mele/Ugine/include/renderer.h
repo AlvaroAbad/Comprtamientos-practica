@@ -31,6 +31,7 @@ public:
 	virtual void BindImage(uint32 glhandle)const;
 	virtual void DeleteImage(uint32 glhandle)const;
     virtual void DrawImage(const Image* image, double x, double y, uint32 frame = 0, double width = 0.0f, double height = 0.0f, double ang = 0) const;
+	virtual void DrawImage(const Image* image, double x, double y, double imageX, double imageY, double width, double height, double ang) const;
 	void PushMatrix() const;
 	void PopMatrix() const;
 	void TranslateMatrix(double x, double y, double z) const;
