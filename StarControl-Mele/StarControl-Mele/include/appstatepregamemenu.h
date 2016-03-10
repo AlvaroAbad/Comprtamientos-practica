@@ -1,8 +1,10 @@
-#ifndef SCM_MAINMENU_H
-#define SCM_MAINMENU_H
+#ifndef SCM_PREGAMEMENU_H
+#define SCM_PREGAMEMENU_H
 
 #include "appState.h"
-#include "../../GUI/include/window.h"
+#include "../../GUI/include/ieventlistener.h"
+class Window;
+
 class AppStatePreGameMenu :public AppState, IEventListener
 {
 public:
@@ -21,4 +23,4 @@ private:
 	Window * window;
 };
 
-#endif // !SCM_MAINMENU_H
+#endif // !SCM_PREGAMEMENU_H

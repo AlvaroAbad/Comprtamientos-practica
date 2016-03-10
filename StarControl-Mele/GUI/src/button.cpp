@@ -13,11 +13,11 @@ void Button::Render()
 {
 	if (isPositionRelative) {
 		Renderer::Instance().DrawImage(currentImage, father->GetPositionX() + x, father->GetPositionY() + y, 0, width, height);
-		ResoruceStore::Instance().GetMainFont()->Render(text, father->GetPositionX() + x + 10, father->GetPositionY() + y + height / 2);
+		ResourceStore::Instance().GetMainFont()->Render(text, father->GetPositionX() + x + 10, father->GetPositionY() + y + height / 2);
 	}
 	else {
 		Renderer::Instance().DrawImage(currentImage, x, y, 0, width, height);
-		ResoruceStore::Instance().GetMainFont()->Render(text, x + 10, y + height /2);
+		ResourceStore::Instance().GetMainFont()->Render(text, x + 10, y + height /2);
 	}
 	
 }

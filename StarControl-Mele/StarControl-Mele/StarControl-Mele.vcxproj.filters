@@ -413,5 +413,8 @@
     <ClCompile Include="..\Ugine\src\ttffont.cpp">
       <Filter>Source Files\Ugine</Filter>
     </ClCompile>
+    <ClCompile Include="src\appstatepregamemenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

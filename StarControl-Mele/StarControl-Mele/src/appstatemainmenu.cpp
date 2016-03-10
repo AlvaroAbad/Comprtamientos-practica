@@ -1,6 +1,6 @@
 #include "../include/appstatemainmenu.h"
-#include "../../Ugine/include/resourcemanager.h"
-#include "../../Ugine/include/string.h"
+#include "../include/resourcestore.h"
+#include "../../GUI/include/window.h"
 #include "../../GUI/include/menu.h"
 #include "../../GUI/include/button.h"
 #include "../../Ugine/include/screen.h"
@@ -22,18 +22,12 @@ void AppStateMainMenu::activate()
 {
 	uint16 width = Screen::Instance().GetWidth();
 	uint16 height = Screen::Instance().GetHeight();
-	String fileName = "../data/ui/mainmenubg.jpg";
-	Image * background = ResourceManager::Instance().LoadImage(fileName);
-	fileName = "../data/ui/mainmenu.png";
-	Image * menuImg = ResourceManager::Instance().LoadImage(fileName);
-	fileName = "../data/ui/mainmenubutton.png";
-	Image * buttonImg = ResourceManager::Instance().LoadImage(fileName);
-	fileName = "../data/ui/mainmenubuttonpressed.png";
-	Image * buttonPressImg = ResourceManager::Instance().LoadImage(fileName);
-	fileName = "../data/ui/mainmenubuttonhoover.png";
-	Image * buttonHooverImg = ResourceManager::Instance().LoadImage(fileName);
-	fileName = "../data/ui/mainmenubuttondisabled.png";
-	Image * buttonDisabledImg = ResourceManager::Instance().LoadImage(fileName);
+	Image * background = ResourceStore::Instance().GetMenuBackGround();
+	Image * menuImg = ResourceStore::Instance().GetMenuImage();
+	Image * buttonImg = ResourceStore::Instance().GetMenuButtonNeutralImage();
+	Image * buttonPressImg = ResourceStore::Instance().GetMenuButtonPressedImage();
+	Image * buttonHooverImg = ResourceStore::Instance().GetMenuButtonHooverImage();
+	Image * buttonDisabledImg = ResourceStore::Instance().GetMenuButtonDisabledImage();
 
 	window = new Window(background);
 	window->SetPosition(0, 0);
@@ -86,7 +80,7 @@ void AppStateMainMenu::activate()
 
 void AppStateMainMenu::deactivate()
 {
-
+	window->Unregister();
 }
 
 void AppStateMainMenu::OnClick(Control * sender)

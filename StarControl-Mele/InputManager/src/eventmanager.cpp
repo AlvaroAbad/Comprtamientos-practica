@@ -82,6 +82,21 @@ void EventManager::Unregister(IRegistrable * element, inputs key, inputs action)
 	Observators.Remove(newObesrvator);
 }
 
+void EventManager::UnregisterAll(IRegistrable * element)
+{
+	Array<Observator> unregisteringObservators;
+	for (size_t i = 0; i < Observators.Size(); i++)
+	{
+		if (Observators[i].element == element) {
+			unregisteringObservators.Add(Observators[i]);
+		}
+	}
+	for (size_t i = 0; i < unregisteringObservators.Size(); i++)
+	{
+		Observators.Remove(unregisteringObservators[i]);
+	}
+}
+
 
 void EventManager::DispachEvents()
 {

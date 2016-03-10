@@ -1,132 +1,218 @@
-﻿  eventmanager.cpp
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\inputmanager\include\eventmanager.h(44): warning C4820: 'EventManager' : '2' bytes padding added after data member 'EventManager::mouseScrollChanged'
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\inputmanager\include\eventmanager.h(49): warning C4091: 'static ' : ignored on left of 'EventManager' when no variable is declared
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(47): warning C4365: 'return' : conversion from 'char' to 'unsigned char', signed/unsigned mismatch
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(80): warning C4365: '=' : conversion from 'size_t' to 'int', signed/unsigned mismatch
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(81): warning C4365: '=' : conversion from 'unsigned int' to 'int', signed/unsigned mismatch
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(82): warning C4365: 'argument' : conversion from 'int' to 'size_t', signed/unsigned mismatch
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(88): warning C4365: '=' : conversion from 'unsigned int' to 'int', signed/unsigned mismatch
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(89): warning C4365: 'argument' : conversion from 'int' to 'size_t', signed/unsigned mismatch
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(94): warning C4365: '=' : conversion from 'unsigned int' to 'int', signed/unsigned mismatch
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(95): warning C4365: '=' : conversion from 'unsigned int' to 'int', signed/unsigned mismatch
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(96): warning C4365: 'argument' : conversion from 'int' to 'size_t', signed/unsigned mismatch
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(122): warning C4365: 'argument' : conversion from 'int' to 'size_t', signed/unsigned mismatch
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(137): warning C4365: '=' : conversion from 'unsigned int' to 'int', signed/unsigned mismatch
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(139): warning C4365: 'argument' : conversion from 'int' to 'size_t', signed/unsigned mismatch
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(199): warning C4365: 'argument' : conversion from 'int' to 'size_t', signed/unsigned mismatch
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(200): warning C4365: 'argument' : conversion from 'int' to 'size_t', signed/unsigned mismatch
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(208): warning C4365: 'argument' : conversion from 'int' to 'size_t', signed/unsigned mismatch
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(209): warning C4365: 'argument' : conversion from 'int' to 'size_t', signed/unsigned mismatch
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(217): warning C4365: 'argument' : conversion from 'int' to 'size_t', signed/unsigned mismatch
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(218): warning C4365: 'argument' : conversion from 'int' to 'size_t', signed/unsigned mismatch
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(270): warning C4242: 'argument' : conversion from 'int' to 'char', possible loss of data
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(277): warning C4242: 'argument' : conversion from 'int' to 'char', possible loss of data
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(421): warning C4365: 'argument' : conversion from 'long' to 'size_t', signed/unsigned mismatch
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(422): warning C4365: 'argument' : conversion from 'long' to 'size_t', signed/unsigned mismatch
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(443): warning C4365: 'argument' : conversion from 'const int' to 'size_t', signed/unsigned mismatch
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\screen.h(37): warning C4820: 'Screen' : '1' bytes padding added after data member 'Screen::opened'
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\screen.h(38): warning C4820: 'Screen' : '2' bytes padding added after data member 'Screen::height'
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\inputmanager\src\eventmanager.cpp(96): warning C4244: 'argument' : conversion from 'double' to 'const float', possible loss of data
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\inputmanager\src\eventmanager.cpp(99): warning C4244: 'argument' : conversion from 'double' to 'const float', possible loss of data
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\inputmanager\src\eventmanager.cpp(107): warning C4244: 'argument' : conversion from 'double' to 'const float', possible loss of data
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\inputmanager\src\eventmanager.cpp(111): warning C4244: 'argument' : conversion from 'double' to 'const float', possible loss of data
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\array.h(95): warning C4365: 'argument' : conversion from 'uint32' to 'int', signed/unsigned mismatch
-          d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\array.h(92) : while compiling class template member function 'void Array<int>::Remove(T &)'
-          with
-          [
-              T=int
-          ]
-          d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\inputmanager\src\eventmanager.cpp(36) : see reference to function template instantiation 'void Array<int>::Remove(T &)' being compiled
-          with
-          [
-              T=int
-          ]
-          d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\inputmanager\include\eventmanager.h(44) : see reference to class template instantiation 'Array<int>' being compiled
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\array.h(85): warning C4365: 'initializing' : conversion from 'int' to 'uint32', signed/unsigned mismatch
-          d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\array.h(84) : while compiling class template member function 'void Array<int>::RemoveAt(int)'
-          d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\array.h(95) : see reference to function template instantiation 'void Array<int>::RemoveAt(int)' being compiled
-          d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\array.h(40) : while compiling class template member function 'Array<int>::Array(uint32)'
-          d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\inputmanager\src\eventmanager.cpp(139) : see reference to function template instantiation 'Array<int>::Array(uint32)' being compiled
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\inputmanager\include\event.h(20): warning C4514: 'Event::resetTimer' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\inputmanager\include\event.h(23): warning C4514: 'Event::GetMousePosX' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\inputmanager\include\event.h(24): warning C4514: 'Event::GetMousePosY' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\inputmanager\include\event.h(25): warning C4514: 'Event::GetMouseScrollPosition' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\inputmanager\include\keyboardcontroller.h(6): warning C4514: 'KeyBoardController::KeyBoardController' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\inputmanager\include\keyboardcontroller.h(8): warning C4514: 'KeyBoardController::~KeyBoardController' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\inputmanager\include\mousecontroller.h(6): warning C4514: 'MouseController::MouseController' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\inputmanager\include\mousecontroller.h(8): warning C4514: 'MouseController::~MouseController' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\inputmanager\include\eventmanager.h(14): warning C4514: 'EventManager::GetMouseX' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\inputmanager\include\eventmanager.h(15): warning C4514: 'EventManager::GetMouseY' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\inputmanager\include\eventmanager.h(19): warning C4514: 'EventManager::GetMouseScrollPosition' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\inputmanager\include\eventmanager.h(27): warning C4514: 'EventManager::~EventManager' : unreferenced inline function has been removed
-c:\program files (x86)\microsoft visual studio 12.0\vc\include\swprintf.inl(36): warning C4514: 'swprintf' : unreferenced inline function has been removed
-c:\program files (x86)\microsoft visual studio 12.0\vc\include\swprintf.inl(49): warning C4514: 'vswprintf' : unreferenced inline function has been removed
-c:\program files (x86)\microsoft visual studio 12.0\vc\include\swprintf.inl(60): warning C4514: '_swprintf_l' : unreferenced inline function has been removed
-c:\program files (x86)\microsoft visual studio 12.0\vc\include\swprintf.inl(73): warning C4514: '_vswprintf_l' : unreferenced inline function has been removed
-c:\program files (x86)\microsoft visual studio 12.0\vc\include\swprintf.inl(85): warning C4514: 'swprintf' : unreferenced inline function has been removed
-c:\program files (x86)\microsoft visual studio 12.0\vc\include\swprintf.inl(97): warning C4514: 'vswprintf' : unreferenced inline function has been removed
-c:\program files (x86)\microsoft visual studio 12.0\vc\include\swprintf.inl(105): warning C4514: '_swprintf_l' : unreferenced inline function has been removed
-c:\program files (x86)\microsoft visual studio 12.0\vc\include\swprintf.inl(117): warning C4514: '_vswprintf_l' : unreferenced inline function has been removed
-c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(422): warning C4514: 'getwchar' : unreferenced inline function has been removed
-c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(424): warning C4514: 'putwchar' : unreferenced inline function has been removed
-c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdlib.h(497): warning C4514: 'abs' : unreferenced inline function has been removed
-c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdlib.h(501): warning C4514: 'abs' : unreferenced inline function has been removed
-c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdlib.h(505): warning C4514: 'div' : unreferenced inline function has been removed
-c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdlib.h(509): warning C4514: 'div' : unreferenced inline function has been removed
-c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(130): warning C4514: 'strnlen_s' : unreferenced inline function has been removed
-c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(221): warning C4514: 'strchr' : unreferenced inline function has been removed
-c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(223): warning C4514: 'strpbrk' : unreferenced inline function has been removed
-c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(232): warning C4514: 'memchr' : unreferenced inline function has been removed
-c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(305): warning C4514: 'wcsnlen_s' : unreferenced inline function has been removed
-c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(382): warning C4514: 'wcschr' : unreferenced inline function has been removed
-c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(384): warning C4514: 'wcspbrk' : unreferenced inline function has been removed
-c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(386): warning C4514: 'wcsrchr' : unreferenced inline function has been removed
-c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(390): warning C4514: 'wcsstr' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(44): warning C4514: 'String::ToCString' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(46): warning C4514: 'String::Chr' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(47): warning C4514: 'String::Asc' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(20): warning C4514: 'String::String' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(23): warning C4514: 'String::operator ==' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(24): warning C4514: 'String::operator !=' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(25): warning C4514: 'String::operator <' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(26): warning C4514: 'String::operator >' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\array.h(13): warning C4710: 'String String::operator +(const String &) const' : function not inlined
-          d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(27) : see declaration of 'String::operator +'
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(28): warning C4514: 'String::operator +' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(30): warning C4514: 'String::operator =' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(33): warning C4514: 'String::operator []' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(34): warning C4514: 'String::operator []' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(38): warning C4514: 'String::FromInt' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(39): warning C4514: 'String::HexFromInt' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(40): warning C4514: 'String::FromFloat' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(42): warning C4514: 'String::ToInt' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(43): warning C4514: 'String::ToFloat' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\array.h(13): warning C4710: 'String String::Left(int) const' : function not inlined
-          d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(49) : see declaration of 'String::Left'
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\array.h(13): warning C4710: 'String String::Right(int) const' : function not inlined
-          d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(50) : see declaration of 'String::Right'
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(51): warning C4514: 'String::Mid' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\array.h(13): warning C4710: 'String String::Replace(const String &,const String &) const' : function not inlined
-          d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(52) : see declaration of 'String::Replace'
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(53): warning C4514: 'String::Find' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(55): warning C4514: 'String::Upper' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(56): warning C4514: 'String::Lower' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\array.h(13): warning C4710: 'String String::LTrim(void) const' : function not inlined
-          d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(57) : see declaration of 'String::LTrim'
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\array.h(13): warning C4710: 'String String::RTrim(void) const' : function not inlined
-          d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(58) : see declaration of 'String::RTrim'
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(59): warning C4514: 'String::Trim' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(60): warning C4514: 'String::LSet' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(61): warning C4514: 'String::RSet' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(63): warning C4514: 'String::StripExt' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(64): warning C4514: 'String::StripDir' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(65): warning C4514: 'String::ExtractExt' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(66): warning C4514: 'String::ExtractDir' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(67): warning C4514: 'String::RealPath' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(69): warning C4514: 'String::Read' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(70): warning C4514: 'String::Write' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(72): warning C4514: 'String::Split' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\screen.h(14): warning C4514: 'Screen::IsOpened' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\screen.h(17): warning C4514: 'Screen::GetWidth' : unreferenced inline function has been removed
-d:\nube\google drive\master\comprtamientos-practica\starcontrol-mele\ugine\include\screen.h(18): warning C4514: 'Screen::GetHeight' : unreferenced inline function has been removed
-  StarControl-Mele.vcxproj -> D:\nube\Google Drive\Master\Comprtamientos-practica\StarControl-Mele\Debug\StarControl-Mele.exe
+﻿Build started 10/03/2016 20:44:24.
+     1>Project "C:\Comprtamientos-practica\StarControl-Mele\StarControl-Mele\StarControl-Mele.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\Ugine\lib\openal /ZI /nologo /Wall /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt src\appstatepregamemenu.cpp
+         appstatepregamemenu.cpp
+     1>c:\comprtamientos-practica\starcontrol-mele\starcontrol-mele\include\appstatepregamemenu.h(15): warning C4150: deletion of pointer to incomplete type 'Window'; no destructor called
+                 c:\comprtamientos-practica\starcontrol-mele\starcontrol-mele\include\appstatepregamemenu.h(6) : see declaration of 'Window'
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(46): warning C4365: 'return' : conversion from 'char' to 'unsigned char', signed/unsigned mismatch
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(79): warning C4365: '=' : conversion from 'size_t' to 'int', signed/unsigned mismatch
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(80): warning C4365: '=' : conversion from 'unsigned int' to 'int', signed/unsigned mismatch
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(81): warning C4365: 'argument' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(87): warning C4365: '=' : conversion from 'unsigned int' to 'int', signed/unsigned mismatch
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(88): warning C4365: 'argument' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(93): warning C4365: '=' : conversion from 'unsigned int' to 'int', signed/unsigned mismatch
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(94): warning C4365: '=' : conversion from 'unsigned int' to 'int', signed/unsigned mismatch
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(95): warning C4365: 'argument' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(121): warning C4365: 'argument' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(136): warning C4365: '=' : conversion from 'unsigned int' to 'int', signed/unsigned mismatch
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(138): warning C4365: 'argument' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(198): warning C4365: 'argument' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(199): warning C4365: 'argument' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(207): warning C4365: 'argument' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(208): warning C4365: 'argument' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(216): warning C4365: 'argument' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(217): warning C4365: 'argument' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(269): warning C4242: 'argument' : conversion from 'int' to 'char', possible loss of data
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(276): warning C4242: 'argument' : conversion from 'int' to 'char', possible loss of data
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(420): warning C4365: 'argument' : conversion from 'long' to 'size_t', signed/unsigned mismatch
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(421): warning C4365: 'argument' : conversion from 'long' to 'size_t', signed/unsigned mismatch
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(442): warning C4365: 'argument' : conversion from 'const int' to 'size_t', signed/unsigned mismatch
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\screen.h(37): warning C4820: 'Screen' : '1' bytes padding added after data member 'Screen::opened'
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\screen.h(38): warning C4820: 'Screen' : '2' bytes padding added after data member 'Screen::height'
+     1>c:\comprtamientos-practica\starcontrol-mele\gui\include\control.h(47): warning C4820: 'Control' : '6' bytes padding added after data member 'Control::hasFocus'
+     1>c:\comprtamientos-practica\starcontrol-mele\gui\include\control.h(50): warning C4820: 'Control' : '4' bytes padding added after data member 'Control::id'
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\image.h(15): warning C4365: 'return' : conversion from 'int' to 'uint32', signed/unsigned mismatch
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\image.h(18): warning C4365: 'return' : conversion from 'int' to 'uint16', signed/unsigned mismatch
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\image.h(19): warning C4365: 'return' : conversion from 'int' to 'uint16', signed/unsigned mismatch
+     1>c:\comprtamientos-practica\starcontrol-mele\gui\include\window.h(19): warning C4820: 'Window' : '4' bytes padding added after data member 'Window::image'
+     1>c:\comprtamientos-practica\starcontrol-mele\gui\include\menu.h(19): warning C4820: 'Menu' : '4' bytes padding added after data member 'Menu::image'
+     1>c:\comprtamientos-practica\starcontrol-mele\gui\include\button.h(12): warning C4189: 'hasFocus' : local variable is initialized but not referenced
+     1>c:\comprtamientos-practica\starcontrol-mele\inputmanager\include\eventmanager.h(45): warning C4820: 'EventManager' : '2' bytes padding added after data member 'EventManager::mouseScrollChanged'
+     1>c:\comprtamientos-practica\starcontrol-mele\inputmanager\include\eventmanager.h(50): warning C4091: 'static ' : ignored on left of 'EventManager' when no variable is declared
+     1>c:\comprtamientos-practica\starcontrol-mele\starcontrol-mele\src\appstatepregamemenu.cpp(61): warning C4100: 'sender' : unreferenced formal parameter
+     1>c:\comprtamientos-practica\starcontrol-mele\starcontrol-mele\include\appstate.h(22): warning C4514: 'AppState::getState' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\starcontrol-mele\include\appstatepregamemenu.h(11): warning C4514: 'AppStatePreGameMenu::AppStatePreGameMenu' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\starcontrol-mele\include\resourcestore.h(17): warning C4514: 'ResourceStore::ResourceStore' : unreferenced inline function has been removed
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\swprintf.inl(36): warning C4514: 'swprintf' : unreferenced inline function has been removed
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\swprintf.inl(49): warning C4514: 'vswprintf' : unreferenced inline function has been removed
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\swprintf.inl(60): warning C4514: '_swprintf_l' : unreferenced inline function has been removed
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\swprintf.inl(73): warning C4514: '_vswprintf_l' : unreferenced inline function has been removed
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\swprintf.inl(85): warning C4514: 'swprintf' : unreferenced inline function has been removed
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\swprintf.inl(97): warning C4514: 'vswprintf' : unreferenced inline function has been removed
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\swprintf.inl(105): warning C4514: '_swprintf_l' : unreferenced inline function has been removed
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\swprintf.inl(117): warning C4514: '_vswprintf_l' : unreferenced inline function has been removed
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(422): warning C4514: 'getwchar' : unreferenced inline function has been removed
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(424): warning C4514: 'putwchar' : unreferenced inline function has been removed
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdlib.h(497): warning C4514: 'abs' : unreferenced inline function has been removed
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdlib.h(501): warning C4514: 'abs' : unreferenced inline function has been removed
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdlib.h(505): warning C4514: 'div' : unreferenced inline function has been removed
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdlib.h(509): warning C4514: 'div' : unreferenced inline function has been removed
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(130): warning C4514: 'strnlen_s' : unreferenced inline function has been removed
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(221): warning C4514: 'strchr' : unreferenced inline function has been removed
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(223): warning C4514: 'strpbrk' : unreferenced inline function has been removed
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(232): warning C4514: 'memchr' : unreferenced inline function has been removed
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(305): warning C4514: 'wcsnlen_s' : unreferenced inline function has been removed
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(382): warning C4514: 'wcschr' : unreferenced inline function has been removed
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(384): warning C4514: 'wcspbrk' : unreferenced inline function has been removed
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(386): warning C4514: 'wcsrchr' : unreferenced inline function has been removed
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(390): warning C4514: 'wcsstr' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(43): warning C4514: 'String::ToCString' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(45): warning C4514: 'String::Chr' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(46): warning C4514: 'String::Asc' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(19): warning C4514: 'String::String' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(22): warning C4514: 'String::operator ==' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(23): warning C4514: 'String::operator !=' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(24): warning C4514: 'String::operator <' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(25): warning C4514: 'String::operator >' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\array.h(13): warning C4710: 'String String::operator +(const String &) const' : function not inlined
+                 c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(26) : see declaration of 'String::operator +'
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(27): warning C4514: 'String::operator +' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(29): warning C4514: 'String::operator =' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(32): warning C4514: 'String::operator []' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(33): warning C4514: 'String::operator []' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(37): warning C4514: 'String::FromInt' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(38): warning C4514: 'String::HexFromInt' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(39): warning C4514: 'String::FromFloat' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(41): warning C4514: 'String::ToInt' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(42): warning C4514: 'String::ToFloat' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\array.h(13): warning C4710: 'String String::Left(int) const' : function not inlined
+                 c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(48) : see declaration of 'String::Left'
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\array.h(13): warning C4710: 'String String::Right(int) const' : function not inlined
+                 c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(49) : see declaration of 'String::Right'
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(50): warning C4514: 'String::Mid' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\array.h(13): warning C4710: 'String String::Replace(const String &,const String &) const' : function not inlined
+                 c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(51) : see declaration of 'String::Replace'
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(52): warning C4514: 'String::Find' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(54): warning C4514: 'String::Upper' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(55): warning C4514: 'String::Lower' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\array.h(13): warning C4710: 'String String::LTrim(void) const' : function not inlined
+                 c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(56) : see declaration of 'String::LTrim'
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\array.h(13): warning C4710: 'String String::RTrim(void) const' : function not inlined
+                 c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(57) : see declaration of 'String::RTrim'
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(58): warning C4514: 'String::Trim' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(59): warning C4514: 'String::LSet' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(60): warning C4514: 'String::RSet' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(62): warning C4514: 'String::StripExt' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(63): warning C4514: 'String::StripDir' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(64): warning C4514: 'String::ExtractExt' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(65): warning C4514: 'String::ExtractDir' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(66): warning C4514: 'String::RealPath' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(68): warning C4514: 'String::Read' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(69): warning C4514: 'String::Write' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\string.h(71): warning C4514: 'String::Split' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\screen.h(14): warning C4514: 'Screen::IsOpened' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\screen.h(23): warning C4514: 'Screen::ElapsedTime' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\screen.h(26): warning C4514: 'Screen::GetMouseX' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\screen.h(27): warning C4514: 'Screen::GetMouseY' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\inputmanager\include\event.h(7): warning C4514: 'Event::Event' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\inputmanager\include\event.h(8): warning C4514: 'Event::Event' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\inputmanager\include\event.h(14): warning C4514: 'Event::SetAction' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\inputmanager\include\event.h(15): warning C4514: 'Event::SetMousePos' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\inputmanager\include\event.h(19): warning C4514: 'Event::ReduceTimeToSettle' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\inputmanager\include\event.h(20): warning C4514: 'Event::resetTimer' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\inputmanager\include\event.h(21): warning C4514: 'Event::GetKey' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\inputmanager\include\event.h(22): warning C4514: 'Event::GetAction' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\inputmanager\include\event.h(23): warning C4514: 'Event::GetMousePosX' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\inputmanager\include\event.h(24): warning C4514: 'Event::GetMousePosY' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\inputmanager\include\event.h(25): warning C4514: 'Event::GetMouseScrollPosition' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\inputmanager\include\event.h(26): warning C4514: 'Event::IsSettled' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\inputmanager\include\event.h(27): warning C4514: 'Event::IsNew' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\inputmanager\include\event.h(28): warning C4514: 'Event::operator ==' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\gui\include\message.h(18): warning C4514: 'Message::Message' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\gui\include\message.h(20): warning C4514: 'Message::SetType' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\gui\include\message.h(21): warning C4514: 'Message::GetType' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\gui\include\control.h(19): warning C4514: 'Control::SetEventListener' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\gui\include\control.h(21): warning C4514: 'Control::SetFocus' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\gui\include\control.h(22): warning C4514: 'Control::RemoveFocus' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\gui\include\control.h(23): warning C4514: 'Control::HasFocus' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\gui\include\control.h(37): warning C4514: 'Control::GetId' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\renderer.h(19): warning C4514: 'Renderer::Instance' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\image.h(13): warning C4514: 'Image::IsValid' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\image.h(14): warning C4514: 'Image::GetFilename' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\image.h(15): warning C4514: 'Image::GetNumFrames' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\image.h(16): warning C4514: 'Image::GetHFrames' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\image.h(17): warning C4514: 'Image::GetVFrames' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\image.h(20): warning C4514: 'Image::GetBufferWidth' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\image.h(21): warning C4514: 'Image::GetBufferHeight' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\image.h(23): warning C4514: 'Image::SetMidHandle' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\image.h(24): warning C4514: 'Image::GetHandleX' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\image.h(25): warning C4514: 'Image::GetHandleY' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\image.h(27): warning C4514: 'Image::GetLastU' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\image.h(28): warning C4514: 'Image::GetLastV' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\ugine\include\image.h(30): warning C4514: 'Image::GetTexId' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\inputmanager\include\keyboardcontroller.h(6): warning C4514: 'KeyBoardController::KeyBoardController' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\inputmanager\include\keyboardcontroller.h(8): warning C4514: 'KeyBoardController::~KeyBoardController' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\inputmanager\include\mousecontroller.h(6): warning C4514: 'MouseController::MouseController' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\inputmanager\include\mousecontroller.h(8): warning C4514: 'MouseController::~MouseController' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\inputmanager\include\eventmanager.h(14): warning C4514: 'EventManager::GetMouseX' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\inputmanager\include\eventmanager.h(15): warning C4514: 'EventManager::GetMouseY' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\inputmanager\include\eventmanager.h(19): warning C4514: 'EventManager::GetMouseScrollPosition' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\inputmanager\include\eventmanager.h(28): warning C4514: 'EventManager::~EventManager' : unreferenced inline function has been removed
+     1>c:\comprtamientos-practica\starcontrol-mele\inputmanager\include\eventmanager.h(35): warning C4514: 'EventManager::Observator::operator ==' : unreferenced inline function has been removed
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Comprtamientos-practica\StarControl-Mele\Debug\StarControl-Mele.exe" /INCREMENTAL /NOLOGO /LIBPATH:../Ugine/lib /LIBPATH:../Ugine/lib/openal openal32.lib glfw.win32.lib opengl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Comprtamientos-practica\StarControl-Mele\Debug\StarControl-Mele.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Comprtamientos-practica\StarControl-Mele\Debug\StarControl-Mele.lib" /MACHINE:X86 Debug\button.obj
+         Debug\control.obj
+         Debug\ieventlistener.obj
+         Debug\menu.obj
+         Debug\window.obj
+         Debug\clic.obj
+         Debug\doubleclic.obj
+         Debug\drag.obj
+         Debug\eventmanager.obj
+         Debug\keyboardcontroller.obj
+         Debug\managercontrolerInteface.obj
+         Debug\managergameinterface.obj
+         Debug\mousecontroller.obj
+         Debug\stb_image.obj
+         Debug\stb_vorbis.obj
+         Debug\affector.obj
+         Debug\audiobuffer.obj
+         Debug\audioengine.obj
+         Debug\audiosource.obj
+         Debug\audiostream.obj
+         Debug\bone.obj
+         Debug\camera.obj
+         Debug\collisionmanager.obj
+         Debug\collisionpixeldata.obj
+         Debug\emitter.obj
+         Debug\font.obj
+         Debug\Glyph.obj
+         Debug\image.obj
+         Debug\isometricmap.obj
+         Debug\isometricscene.obj
+         Debug\isometricsprite.obj
+         Debug\listener.obj
+         Debug\map.obj
+         Debug\mapscene.obj
+         Debug\math.obj
+         Debug\parallaxscene.obj
+         Debug\particle.obj
+         Debug\renderer.obj
+         Debug\resourcemanager.obj
+         Debug\scene.obj
+         Debug\screen.obj
+         Debug\skeletondata.obj
+         Debug\skeletonsprite.obj
+         Debug\sprite.obj
+         Debug\ttffont.obj
+         Debug\appstatemainmenu.obj
+         Debug\appstatepregamemenu.obj
+         Debug\main.obj
+         Debug\resourcestore.obj
+         StarControl-Mele.vcxproj -> C:\Comprtamientos-practica\StarControl-Mele\Debug\StarControl-Mele.exe
+     1>Done Building Project "C:\Comprtamientos-practica\StarControl-Mele\StarControl-Mele\StarControl-Mele.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.51

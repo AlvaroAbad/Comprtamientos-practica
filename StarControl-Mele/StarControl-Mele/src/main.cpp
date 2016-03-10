@@ -1,22 +1,22 @@
 #include "../include/appState.h"
 #include "../include/appstatemainmenu.h"
-
+#include "../include/appstatepregamemenu.h"
 #include "../../Ugine/include/screen.h"
 #include "../../Ugine/include/renderer.h"
 #include "../../Ugine/include/resourcemanager.h"
 #include "../../InputManager/include/keyboardcontroller.h"
 #include "../../InputManager/include/mousecontroller.h"
 AppState *currentState = nullptr;
-appStates whantedState = STATE_MENU;
+appStates whantedState = STATE_MAINMENU;
 //Game *game = nullptr;
 AppState * newAppState(appStates state) {
 	switch (state)
 	{
-	case STATE_MENU:
+	case STATE_MAINMENU:
 		return new AppStateMainMenu();
 		break;
-	case STATE_GAME:
-		return new AppStateGame();
+	case STATE_PREGAMEMENU:
+		return new AppStatePreGameMenu();
 		break;
 	/*case STATE_PAUSE:
 		return new AppStatePause();*/

@@ -10,3 +10,8 @@ void ManagerGameInterface::Unregister(IRegistrable * element, inputs key, inputs
 	EventManager::Instance().Unregister(element, key, action);
 }
 
+void ManagerGameInterface::UnregisterAll(IRegistrable * element)
+{
+	EventManager::Instance().UnregisterAll(element);
+}
+

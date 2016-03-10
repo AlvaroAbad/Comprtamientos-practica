@@ -17,7 +17,7 @@ public:
 	virtual bool OnInputEvent(const Message * message);
 	virtual void Register(inputs key, inputs action);
 	virtual void Unregister(inputs key, inputs action);
-	
+	virtual void Unregister() {}
 	virtual void SetText(String text) {
 		this->text = text;
 	}

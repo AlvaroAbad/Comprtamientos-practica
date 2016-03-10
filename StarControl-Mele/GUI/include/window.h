@@ -10,6 +10,7 @@ public:
 	virtual bool OnInputEvent(const Message * message);
 	virtual void Register(inputs key, inputs action);
 	virtual void Unregister(inputs key, inputs action);
+	virtual void Unregister();
 	Window(Image * image) :Control(""), image(image) {}
 	~Window();
 

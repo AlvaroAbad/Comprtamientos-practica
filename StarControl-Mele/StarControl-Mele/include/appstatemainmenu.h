@@ -2,7 +2,8 @@
 #define SCM_MAINMENU_H
 
 #include "appState.h"
-#include "../../GUI/include/window.h"
+#include "../../GUI/include/ieventlistener.h"
+class Window;
 class AppStateMainMenu:public AppState, IEventListener
 {
 public:

@@ -42,6 +42,11 @@ void Window::Unregister(inputs key, inputs action)
 	ManagerGameInterface::Unregister(this, key, action);
 }
 
+void Window::Unregister()
+{
+	ManagerGameInterface::UnregisterAll(this);
+}
+
 Window::~Window()
 {
 	for (uint32 i = 0; i < childs.Size(); i++)

@@ -21,6 +21,7 @@ public:
 	}
 	void Register(IRegistrable* element, inputs key, inputs action);
 	void Unregister(IRegistrable* element, inputs key, inputs action);
+	void UnregisterAll(IRegistrable* element);
 	void DispachEvents();
 protected:
 	EventManager();
