@@ -13,6 +13,9 @@ public:
 	Image * GetMenuButtonPressedImage();
 	Image * GetMenuButtonHooverImage();
 	Image * GetMenuButtonDisabledImage();
+	Image * GetMenuButtonBackImage();
+	Image * GetMenuButtonBackPressedImage();
+	Image * GetMenuButtonBackHooverImage();
 protected:
 	ResourceStore() {
 		mainFont = nullptr;
@@ -28,6 +31,9 @@ private:
 	Image * menuButtonPressed;
 	Image * menuButtonHoover;
 	Image * menuButtonDisabled;
+	Image * menuButtonBackNeutral;
+	Image * menuButtonBackPressed;
+	Image * menuButtonBackHoover;
 
 #define MAIN_FONT_DIR "../data/Fonts/spaceage.ttf"
 #define MENU_BACKGROUND_DIR "../data/ui/mainmenubg.jpg"
@@ -36,6 +42,9 @@ private:
 #define MENU_BUTTON_PRESSED_DIR "../data/ui/mainmenubuttonpressed.png"
 #define MENU_BUTTON_HOOVER_DIR "../data/ui/mainmenubuttonhoover.png"
 #define MENU_BUTTON_DISABLED_DIR "../data/ui/mainmenubuttondisabled.png"
+#define MENU_BUTTON_BACK_DIR "../data/ui/back.png"
+#define MENU_BUTTON_BACK_PRESSED_DIR "../data/ui/backpressed.png"
+#define MENU_BUTTON_BACK_HOOVER_DIR "../data/ui/backhoover.png"
 };
 #endif // !SCM_RESOURCESSTORE_H
 

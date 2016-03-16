@@ -6,6 +6,7 @@
 #include "../../Ugine/include/screen.h"
 #include "../../InputManager/include/eventmanager.h"
 #include "../include/externs.h"
+
 void AppStateMainMenu::run()
 {
 	window->Update();

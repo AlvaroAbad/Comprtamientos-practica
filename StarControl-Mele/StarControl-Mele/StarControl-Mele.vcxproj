@@ -153,6 +153,7 @@
     <ClInclude Include="..\GUI\include\control.h" />
     <ClInclude Include="..\GUI\include\dragmessage.h" />
     <ClInclude Include="..\GUI\include\ieventlistener.h" />
+    <ClInclude Include="..\GUI\include\imageselector.h" />
     <ClInclude Include="..\GUI\include\menu.h" />
     <ClInclude Include="..\GUI\include\message.h" />
     <ClInclude Include="..\GUI\include\mousebuttonclickmessage.h" />
@@ -232,6 +233,7 @@
     <ClCompile Include="..\GUI\src\button.cpp" />
     <ClCompile Include="..\GUI\src\control.cpp" />
     <ClCompile Include="..\GUI\src\ieventlistener.cpp" />
+    <ClCompile Include="..\GUI\src\imageselector.cpp" />
     <ClCompile Include="..\GUI\src\menu.cpp" />
     <ClCompile Include="..\GUI\src\window.cpp" />
     <ClCompile Include="..\InputManager\src\clic.cpp" />

@@ -63,5 +63,29 @@ Image * ResourceStore::GetMenuButtonDisabledImage()
 	return menuButtonDisabled;
 }
 
+Image * ResourceStore::GetMenuButtonBackImage()
+{
+	if (!menuButtonBackNeutral) {
+		menuButtonBackNeutral = ResourceManager::Instance().LoadImage(MENU_BUTTON_BACK_DIR);
+	}
+	return menuButtonBackNeutral;
+}
+
+Image * ResourceStore::GetMenuButtonBackPressedImage()
+{
+	if (!menuButtonBackPressed) {
+		menuButtonBackPressed = ResourceManager::Instance().LoadImage(MENU_BUTTON_BACK_PRESSED_DIR);
+	}
+	return menuButtonBackPressed;
+}
+
+Image * ResourceStore::GetMenuButtonBackHooverImage()
+{
+	if (!menuButtonBackHoover) {
+		menuButtonBackHoover = ResourceManager::Instance().LoadImage(MENU_BUTTON_BACK_HOOVER_DIR);
+	}
+	return menuButtonBackHoover;
+}
+
 ResourceStore::~ResourceStore(){
 }

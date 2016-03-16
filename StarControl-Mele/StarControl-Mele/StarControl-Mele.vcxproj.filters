@@ -267,6 +267,9 @@
     <ClInclude Include="include\appstatepregamemenu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\GUI\include\imageselector.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\GUI\src\ieventlistener.cpp">
@@ -415,6 +418,9 @@
     </ClCompile>
     <ClCompile Include="src\appstatepregamemenu.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GUI\src\imageselector.cpp">
+      <Filter>Source Files\GUI</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
