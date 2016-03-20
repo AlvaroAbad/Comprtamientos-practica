@@ -87,5 +87,21 @@ Image * ResourceStore::GetMenuButtonBackHooverImage()
 	return menuButtonBackHoover;
 }
 
+Image * ResourceStore::GetAvatarImage()
+{
+	if (!avatar) {
+		avatar = ResourceManager::Instance().LoadImage(AVATAR_DIR);
+	}
+	return avatar;
+}
+
+Image * ResourceStore::GetDreadnoughtImage()
+{
+	if (!dreadnought) {
+		dreadnought = ResourceManager::Instance().LoadImage(DREADNOUGHT_DIR);
+	}
+	return dreadnought;
+}
+
 ResourceStore::~ResourceStore(){
 }

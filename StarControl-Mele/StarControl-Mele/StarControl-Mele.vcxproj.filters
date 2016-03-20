@@ -198,25 +198,10 @@
     <ClInclude Include="..\GUI\include\control.h">
       <Filter>Header Files\GUI</Filter>
     </ClInclude>
-    <ClInclude Include="..\GUI\include\dragmessage.h">
-      <Filter>Header Files\GUI</Filter>
-    </ClInclude>
     <ClInclude Include="..\GUI\include\ieventlistener.h">
       <Filter>Header Files\GUI</Filter>
     </ClInclude>
     <ClInclude Include="..\GUI\include\message.h">
-      <Filter>Header Files\GUI</Filter>
-    </ClInclude>
-    <ClInclude Include="..\GUI\include\mousebuttonclickmessage.h">
-      <Filter>Header Files\GUI</Filter>
-    </ClInclude>
-    <ClInclude Include="..\GUI\include\mousebuttonpressedmessage.h">
-      <Filter>Header Files\GUI</Filter>
-    </ClInclude>
-    <ClInclude Include="..\GUI\include\mousebuttonreleasedmessage.h">
-      <Filter>Header Files\GUI</Filter>
-    </ClInclude>
-    <ClInclude Include="..\GUI\include\mousemovementmessage.h">
       <Filter>Header Files\GUI</Filter>
     </ClInclude>
     <ClInclude Include="..\GUI\include\window.h">

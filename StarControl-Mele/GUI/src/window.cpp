@@ -21,7 +21,7 @@ void Window::Render()
 	}
 }
 
-bool Window::OnInputEvent(const Message * message)
+bool Window::OnInputEvent(const GUIMessage * message)
 {
 	bool used = false;
 	uint32 i = 0;

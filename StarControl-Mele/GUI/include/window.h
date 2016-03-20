@@ -7,7 +7,7 @@ class Window: public Control
 public:
 	virtual void Update();
 	virtual void Render();
-	virtual bool OnInputEvent(const Message * message);
+	virtual bool OnInputEvent(const GUIMessage * message);
 	virtual void Register(inputs key, inputs action);
 	virtual void Unregister(inputs key, inputs action);
 	virtual void Unregister();

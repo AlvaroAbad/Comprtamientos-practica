@@ -25,7 +25,7 @@ void Menu::Render()
 	}
 }
 
-bool Menu::OnInputEvent(const Message * message)
+bool Menu::OnInputEvent(const GUIMessage * message)
 {
 	bool used = false;
 	uint32 i = 0;

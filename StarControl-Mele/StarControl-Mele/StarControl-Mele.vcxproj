@@ -151,15 +151,10 @@
   <ItemGroup>
     <ClInclude Include="..\GUI\include\button.h" />
     <ClInclude Include="..\GUI\include\control.h" />
-    <ClInclude Include="..\GUI\include\dragmessage.h" />
     <ClInclude Include="..\GUI\include\ieventlistener.h" />
     <ClInclude Include="..\GUI\include\imageselector.h" />
     <ClInclude Include="..\GUI\include\menu.h" />
     <ClInclude Include="..\GUI\include\message.h" />
-    <ClInclude Include="..\GUI\include\mousebuttonclickmessage.h" />
-    <ClInclude Include="..\GUI\include\mousebuttonpressedmessage.h" />
-    <ClInclude Include="..\GUI\include\mousebuttonreleasedmessage.h" />
-    <ClInclude Include="..\GUI\include\mousemovementmessage.h" />
     <ClInclude Include="..\GUI\include\window.h" />
     <ClInclude Include="..\InputManager\include\clic.h" />
     <ClInclude Include="..\InputManager\include\doubleclic.h" />

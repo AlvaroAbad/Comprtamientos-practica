@@ -16,6 +16,8 @@ public:
 	Image * GetMenuButtonBackImage();
 	Image * GetMenuButtonBackPressedImage();
 	Image * GetMenuButtonBackHooverImage();
+	Image * GetAvatarImage();
+	Image * GetDreadnoughtImage();
 protected:
 	ResourceStore() {
 		mainFont = nullptr;
@@ -34,6 +36,8 @@ private:
 	Image * menuButtonBackNeutral;
 	Image * menuButtonBackPressed;
 	Image * menuButtonBackHoover;
+	Image * avatar;
+	Image * dreadnought;
 
 #define MAIN_FONT_DIR "../data/Fonts/spaceage.ttf"
 #define MENU_BACKGROUND_DIR "../data/ui/mainmenubg.jpg"
@@ -45,6 +49,9 @@ private:
 #define MENU_BUTTON_BACK_DIR "../data/ui/back.png"
 #define MENU_BUTTON_BACK_PRESSED_DIR "../data/ui/backpressed.png"
 #define MENU_BUTTON_BACK_HOOVER_DIR "../data/ui/backhoover.png"
+
+#define AVATAR_DIR "../data/sc2/ChmmrAvatar/avatar.png"
+#define DREADNOUGHT_DIR "../data/sc1/KzerZaDreadnought/dreadnought.png"
 };
 #endif // !SCM_RESOURCESSTORE_H
 

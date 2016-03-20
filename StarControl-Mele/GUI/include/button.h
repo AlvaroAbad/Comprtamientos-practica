@@ -7,14 +7,14 @@
 class Button : public Control
 {
 public:
-	Button(String btnId, Image * activeImage, Image * pressedImage = NULL, Image * hooverImage = NULL, Image * disabledImage = NULL) :Control(btnId),
+	Button(String btnId, Image * activeImage, Image * pressedImage = nullptr, Image * hooverImage = nullptr, Image * disabledImage = nullptr) :Control(btnId),
 		currentImage(activeImage), activeImage(activeImage), pressedImage(pressedImage), disabledImage(disabledImage), hooverImage(hooverImage) {
 		bool hasFocus = false;
 	}
 
 	virtual void Update();
 	virtual void Render();
-	virtual bool OnInputEvent(const Message * message);
+	virtual bool OnInputEvent(const GUIMessage * message);
 	virtual void Register(inputs key, inputs action);
 	virtual void Unregister(inputs key, inputs action);
 	virtual void Unregister() {}

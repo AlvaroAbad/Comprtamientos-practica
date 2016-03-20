@@ -4,6 +4,7 @@
 #include "../../GUI/include/window.h"
 #include "../../GUI/include/menu.h"
 #include "../../GUI/include/button.h"
+#include "../../GUI/include/imageselector.h"
 #include "../../InputManager/include/eventmanager.h"
 #include "../include/externs.h"
 
@@ -35,6 +36,8 @@ void AppStatePreGameMenu::activate()
 	Image * buttonBackImg = ResourceStore::Instance().GetMenuButtonBackImage();
 	Image * buttonBackPressedImg = ResourceStore::Instance().GetMenuButtonBackPressedImage();
 	Image * buttonBackHooverImg = ResourceStore::Instance().GetMenuButtonBackHooverImage();
+	Image * avatarImg = ResourceStore::Instance().GetAvatarImage();
+	Image * dreadnoughtImg = ResourceStore::Instance().GetDreadnoughtImage();
 
 	/*Create Window*/
 	window = new Window(background);
@@ -55,13 +58,22 @@ void AppStatePreGameMenu::activate()
 	buttonStart->SetText("Start");
 	menu->AddChild(buttonStart);
 
+	window->AddChild(menu);
+
 	Button * buttonBack = new Button("btnBack", buttonBackImg, buttonBackPressedImg, buttonBackHooverImg);
 	buttonBack->setPositionType(true);
 	buttonBack->SetPosition(10, 10);
 	buttonBack->SetDimensions(buttonBackImg->GetWidth(), buttonImg->GetHeight());
 	window->AddChild(buttonBack);
 
-	window->AddChild(menu);
+	ImageSelector * Player1ShipoSlector = new ImageSelector("iselPlayer1", 50, 50);
+	Player1ShipoSlector->setPositionType(true);
+	Player1ShipoSlector->SetPosition(0, buttonImg->GetHeight() + 20);
+	Player1ShipoSlector->SetDimensions(width - menuImg->GetWidth(), height / 2, 10);
+	Player1ShipoSlector->AddImage(avatarImg);
+	Player1ShipoSlector->AddImage(dreadnoughtImg);
+	window->AddChild(Player1ShipoSlector);
+	
 
 	buttonStart->Register(inputs::MOUSE_BUTTON_LEFT, inputs::KEY_PRESS);
 	buttonBack->Register(inputs::MOUSE_BUTTON_LEFT, inputs::KEY_PRESS);
@@ -71,6 +83,10 @@ void AppStatePreGameMenu::activate()
 
 	buttonStart->Register(inputs::KEY_UNKNOWN, inputs::MOUSE_MOVEMENT);
 	buttonBack->Register(inputs::KEY_UNKNOWN, inputs::MOUSE_MOVEMENT);
+
+	Player1ShipoSlector->Register(inputs::MOUSE_BUTTON_LEFT, inputs::CLICK);
+	Player1ShipoSlector->Register(inputs::KEY_LEFT, inputs::KEY_PRESS);
+	Player1ShipoSlector->Register(inputs::KEY_RIGHT, inputs::KEY_PRESS);
 
 	buttonBack->SetEventListener(this);
 }

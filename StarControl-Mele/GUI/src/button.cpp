@@ -1,8 +1,7 @@
 #include "../../GUI/include/button.h"
 #include "../../Ugine/include/renderer.h"
-#include "../../GUI/include/mousebuttonpressedmessage.h"
-#include "../../GUI/include/mousemovementmessage.h"
 #include "../../Ugine/include/math.h"
+#include "../../GUI/include/message.h"
 #include "../../StarControl-Mele/include/resourcestore.h"
 #include "../../Ugine/include/ttffont.h"
 void Button::Update()
@@ -22,7 +21,7 @@ void Button::Render()
 	
 }
 
-bool Button::OnInputEvent(const Message * message)
+bool Button::OnInputEvent(const GUIMessage * message)
 {
 	double trueX, trueY;
 	trueX = x;
@@ -34,7 +33,7 @@ bool Button::OnInputEvent(const Message * message)
 	bool used = false;
 	switch (message->GetType())
 	{
-	case Message::MOUSE_BUTTON_PRESS:
+	case GUIMessage::MOUSE_BUTTON_PRESS:
 	{
 		const MouseButtonPressedMessage * mousePressedButton = static_cast<const MouseButtonPressedMessage *>(message);
 		if (PointInRect(mousePressedButton->GetX(), mousePressedButton->GetY(), trueX, trueY, width, height)) {
@@ -44,19 +43,19 @@ bool Button::OnInputEvent(const Message * message)
 		}
 	}
 	break;
-	case Message::MOUSE_BUTTON_RELEASE:
+	case GUIMessage::MOUSE_BUTTON_RELEASE:
 		if (currentImage == pressedImage) {
 			currentImage = hooverImage;
 			used = true;
 		}
 		break;
-	case Message::KEY_PRESS:
+	case GUIMessage::KEY_PRESS:
 		if (hasFocus) {
 			currentImage = pressedImage;
 			used = true;
 		}
 		break;
-	case Message::MOUSE_MOVE:
+	case GUIMessage::MOUSE_MOVE:
 		const MouseMovementMessage * mouseMovement = static_cast<const MouseMovementMessage *>(message);
 		if (PointInRect(mouseMovement->GetX(), mouseMovement->GetY(), trueX, trueY, width, height)) {
 			currentImage = hooverImage;

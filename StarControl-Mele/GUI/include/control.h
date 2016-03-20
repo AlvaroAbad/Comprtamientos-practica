@@ -12,10 +12,10 @@ class Control: public IRegistrable
 public:
 
 	virtual void OnEvent(const Event * action);
-	void InjectMessage(const Message * message);
+	void InjectMessage(const GUIMessage * message);
 	virtual void Update()=0;
 	virtual void Render()=0;
-	virtual bool OnInputEvent(const Message * message)=0;
+	virtual bool OnInputEvent(const GUIMessage * message)=0;
 	void SetEventListener(IEventListener* eventListener) { this->eventListener = eventListener; }
 	void AddChild(Control * child);
 	void SetFocus() { hasFocus = true; }

@@ -1,13 +1,9 @@
 #include "../../GUI/include/control.h"
-#include "../../GUI/include/mousemovementmessage.h"
-#include "../../GUI/include/dragmessage.h"
-#include "../../GUI/include/mousebuttonclickmessage.h"
-#include "../../GUI/include/mousebuttonpressedmessage.h"
-#include "../../GUI/include/mousebuttonreleasedmessage.h"
+#include "../../GUI/include/message.h"
 #pragma warning (disable : 4062 ) 
 void Control::OnEvent(const Event * action)
 {
-	Message * message=nullptr;
+	GUIMessage * message=nullptr;
 	switch (action->GetAction())
 	{
 	case KEY_RELEASE:
@@ -23,7 +19,7 @@ void Control::OnEvent(const Event * action)
 			message = new MouseButtonPressedMessage(action->GetMousePosX(), action->GetMousePosY());
 		}
 		else {
-			//KeyPressMessage
+			message = new KeyPressedMessage(static_cast<GUIMessage::KeyCode>(action->GetKey()));
 		}
 		break;
 	case CLICK:
@@ -49,7 +45,7 @@ void Control::OnEvent(const Event * action)
 	delete message;
 }
 
-void Control::InjectMessage(const Message * message)
+void Control::InjectMessage(const GUIMessage * message)
 {
 	OnInputEvent(message);
 }

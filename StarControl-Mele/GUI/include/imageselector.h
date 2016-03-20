@@ -7,23 +7,24 @@
 class ImageSelector : public Control
 {
 public:
-	ImageSelector(String btnId,double imageWidth, double imageHeight, Image * Background=NULL) :Control(btnId),
-		imageWidth(imageWidth), imageHeight(imageHeight),Background(Background) {
+	ImageSelector(String btnId, double imageWidth, double imageHeight, Image * Background = nullptr) :Control(btnId),
+		imageWidth(imageWidth), imageHeight(imageHeight), Background(Background) {
 		selectedImage = -1;
 		bool hasFocus = false;
 	}
 
 	virtual void Update();
 	virtual void Render();
-	virtual bool OnInputEvent(const Message * message);
+	virtual bool OnInputEvent(const GUIMessage * message);
 	virtual void Register(inputs key, inputs action);
 	virtual void Unregister(inputs key, inputs action);
 	virtual void Unregister() {}
 	virtual void AddImage(Image * item);
-	virtual void SetDimensions(double width, double height) {
+	virtual void SetDimensions(double width, double height, double margin) {
 		Control::SetDimensions(width, height);
-		maxColumns = width / imageWidth;
-		maxRows = height / imageHeight;
+		this->margin = margin;
+		maxColumns = width / (imageWidth + (2 * margin));
+		maxRows = height / (imageHeight + (2 * margin));
 	}
 
 	~ImageSelector() {};
@@ -35,8 +36,8 @@ private:
 	};
 	Image * Background;
 	Array<imageHolder> images;
-	double imageWidth, imageHeight;
-	float maxRows, maxColumns;
+	double imageWidth, imageHeight, margin;
+	uint32 maxRows, maxColumns;
 	int32 selectedImage;
 };
 #endif //!GUI_IMAGESELECTOR_H
