@@ -6,7 +6,7 @@ class MapScene:public ParallaxScene{
 public:
 	MapScene(Map* map,Image* imageBack = 0,Image* imageFront = 0);
 	virtual const Map* GetMap()const { return this->map; }
-	virtual void Update(double elapsed) { ParallaxScene::Update(elapsed,this->map); }
+	void Update(double elapsed) { ParallaxScene::Update(elapsed,this->map); }
 protected:
 	virtual void RenderAfterBackground()const;
 private:

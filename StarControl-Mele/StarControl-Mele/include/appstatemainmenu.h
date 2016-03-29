@@ -11,7 +11,7 @@ public:
 		this->setState(STATE_MAINMENU);
 		window = nullptr;
 	};
-	~AppStateMainMenu() { delete window; };
+	~AppStateMainMenu();
 	void virtual run();
 	void virtual draw() const;
 	void virtual getInputs();

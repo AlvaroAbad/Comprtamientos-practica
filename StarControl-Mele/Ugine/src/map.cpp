@@ -35,35 +35,35 @@ Map::Map(const String &filename, uint16 firstColId) {
 	
 
 	attr=root->first_attribute("width")->value();
-	this->width = attr.ToInt();
+	this->width =static_cast<uint16>(attr.ToInt());
 	attr = root->first_attribute("height")->value();
-	this->height = attr.ToInt();
+	this->height = static_cast<uint16>(attr.ToInt());
 	attr = root->first_attribute("tilewidth")->value();
-	this->tileWidth = attr.ToInt();
+	this->tileWidth = static_cast<uint16>(attr.ToInt());
 	attr = root->first_attribute("tileheight")->value();
-	this->tileHeight = attr.ToInt();
+	this->tileHeight = static_cast<uint16>(attr.ToInt());
 	
 	tileSet = root->first_node("tileset");
 	attr = tileSet->first_attribute("firstgid")->value();
-	firstGId = attr.ToInt();
+	firstGId = static_cast<uint32>(attr.ToInt());
 	attr = tileSet->first_attribute("tilewidth")->value();
-	tileWidth = attr.ToInt();
+	tileWidth = static_cast<uint32>(attr.ToInt());
 	attr = tileSet->first_attribute("tileheight")->value();
-	tileHeight = attr.ToInt();
+	tileHeight = static_cast<uint32>(attr.ToInt());
 	tileOffSet= tileSet->first_node("tileoffset");
 	if (tileOffSet) {
 		attr = tileOffSet->first_attribute("x")->value();
-		x = attr.ToInt();
+		x = static_cast<uint32>(attr.ToInt());
 		attr = tileOffSet->first_attribute("y")->value();
-		y = attr.ToInt();
+		y = static_cast<uint32>(attr.ToInt());
 	}
 	image= tileSet->first_node("image");
 	attr = image->first_attribute("source")->value();
 	this->imageFile = attr.StripDir();
 	attr = image->first_attribute("height")->value();
-	imageH = attr.ToInt();
+	imageH = static_cast<uint32>(attr.ToInt());
 	attr = image->first_attribute("width")->value();
-	imageW = attr.ToInt();
+	imageW = static_cast<uint32>(attr.ToInt());
 
 	data = root->first_node("layer")->first_node("data");
 	if (data->first_attribute("encoding")) {

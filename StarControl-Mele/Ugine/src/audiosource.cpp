@@ -9,7 +9,7 @@ AudioSource::AudioSource(AudioBuffer * buffer)
 	alSource3f(source, AL_POSITION, 0.0, 0.0, 0.0);
 	alSource3f(source, AL_VELOCITY, 0.0, 0.0, 0.0);
 	alSourcef(source, AL_LOOPING, false);
-	alSourcef(source, AL_BUFFER, buffer->GetBuffer());
+	alSourcef(source, AL_BUFFER, static_cast<ALfloat>(buffer->GetBuffer()));
 }
 
 AudioSource::AudioSource(const String & filename)

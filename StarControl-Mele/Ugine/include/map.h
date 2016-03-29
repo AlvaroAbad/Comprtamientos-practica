@@ -11,15 +11,15 @@ class Image;
 class Map {
 public:
     Map(const String& filename, uint16 firstColId = 0);
-
+	virtual ~Map() {};
     virtual const String& GetFilename() const { return filename; }
     virtual bool IsValid() const { return valid; }
     virtual void Render() const;
     virtual bool CheckCollision(const Collision* collision) const;
     virtual const Image* GetImage() const { return image; }
     virtual Image* GetImage() { return image; }
-    virtual uint32 GetWidth() const { return width * tileWidth; }
-    virtual uint32 GetHeight() const { return height * tileHeight; }
+    virtual uint32 GetWidth() const { return static_cast<uint32>(width * tileWidth); }
+    virtual uint32 GetHeight() const { return static_cast<uint32>(height * tileHeight); }
     virtual uint16 GetTileWidth() const { 
 		return tileWidth; 
 	}
@@ -27,7 +27,7 @@ public:
     virtual uint16 GetColumns() const { return width; }
     virtual uint16 GetRows() const { return height; }
     virtual int32 GetTileId(uint16 column, uint16 row) const { 
-		return tileIds[row*GetColumns() + column]; 
+		return tileIds[static_cast<uint32>(row*GetColumns() + column)];
 	}
     virtual double GetGroundY(double x, double y) const;
     virtual uint16 GetFirstColId() const { return firstColId; }

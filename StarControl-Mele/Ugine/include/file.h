@@ -49,7 +49,7 @@ public:
     unsigned int WriteBytes(const void* buffer, unsigned int count) { return fwrite(buffer, 1, count, handle); }
 private:
     FILE* handle;
-    unsigned long size;
+    uint64 size;
 };
 
 inline File::File(const String& filename, int mode) {

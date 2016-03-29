@@ -13,7 +13,6 @@ CollisionManager & CollisionManager::Instance()
 
 bool CollisionManager::CircleToCircle(double x1, double y1, double r1, double x2, double y2, double r2) const
 {
-	double centerX1, centerY1, centerX2, centerY2;
 	double distC;
 	distC=Distance(x1, y1, x2, y2);
 	if (r1 + r2 >= distC) {
@@ -72,7 +71,7 @@ bool CollisionManager::CircleToRect(double cx, double cy, double cr, double rx, 
 bool CollisionManager::PixelsToPixels(const CollisionPixelData * p1, double x1, double y1, const CollisionPixelData * p2, double x2, double y2) const
 {
 	double overlapRectX, overlapRectY, overlapRectW, overlapRectH;
-	double x, y, p1x, p1y, p2x, p2y;
+	double x, y;
 	if(RectsOverlap(x1, y1, p1->GetWidth(), p1->GetHeight(), x2, y2, p2->GetWidth(), p2->GetHeight())){
 	OverlappingRect(x1, y1, p1->GetWidth(), p1->GetHeight(), x2, y2, p2->GetWidth(), p2->GetHeight(), &overlapRectX, &overlapRectY, &overlapRectW, &overlapRectH);
 	x = overlapRectX;

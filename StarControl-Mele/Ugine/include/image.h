@@ -12,11 +12,11 @@ public:
 
     virtual bool IsValid() const { return gltex != 0; }
     virtual const String& GetFilename() const { return filename; }
-    virtual uint32 GetNumFrames() const { return hframes * vframes; }
+    virtual uint32 GetNumFrames() const { return static_cast<uint32>(hframes * vframes); }
     virtual uint16 GetHFrames() const { return hframes; }
     virtual uint16 GetVFrames() const { return vframes; }
-    virtual uint16 GetWidth() const { return width / hframes; }
-    virtual uint16 GetHeight() const { return height / vframes; }
+    virtual uint16 GetWidth() const { return static_cast<uint16>(width / hframes); }
+    virtual uint16 GetHeight() const { return static_cast<uint16>(height / vframes); }
 	virtual uint16 GetBufferWidth() const { return width; }
 	virtual uint16 GetBufferHeight() const { return height; }
     virtual void SetHandle(int32 handlex, int32 handley) { this->handlex = handlex; this->handley = handley; }

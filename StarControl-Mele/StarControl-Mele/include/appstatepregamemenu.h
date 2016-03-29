@@ -4,7 +4,8 @@
 #include "appState.h"
 #include "../../GUI/include/ieventlistener.h"
 class Window;
-
+class DropList;
+class ImageSelector;
 class AppStatePreGameMenu :public AppState, IEventListener
 {
 public:
@@ -12,7 +13,7 @@ public:
 		this->setState(STATE_PREGAMEMENU);
 		window = nullptr;
 	};
-	~AppStatePreGameMenu() { delete window; };
+	~AppStatePreGameMenu();
 	void virtual run();
 	void virtual draw() const;
 	void virtual getInputs();
@@ -21,6 +22,8 @@ public:
 	void OnClick(Control * sender);
 private:
 	Window * window;
+	DropList * dlP1Settings, *dlP2Settings;
+	ImageSelector * Player1ShipoSlector, *Player2ShipoSlector;
 };
 
 #endif // !SCM_PREGAMEMENU_H

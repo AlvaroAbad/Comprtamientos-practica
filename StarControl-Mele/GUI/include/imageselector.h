@@ -2,15 +2,15 @@
 #define GUI_IMAGESELECTOR_H
 
 #include "control.h"
-#include "../../Ugine/include/image.h"
 
+class Image;
 class ImageSelector : public Control
 {
 public:
-	ImageSelector(String btnId, double imageWidth, double imageHeight, Image * Background = nullptr) :Control(btnId),
-		imageWidth(imageWidth), imageHeight(imageHeight), Background(Background) {
+	ImageSelector(String* btnId, double imageWidth, double imageHeight, double margin, Image * Background = nullptr) :Control(btnId),
+		imageWidth(imageWidth), imageHeight(imageHeight), margin(margin), Background(Background) {
 		selectedImage = -1;
-		bool hasFocus = false;
+		hasFocus = false;
 	}
 
 	virtual void Update();
@@ -20,13 +20,19 @@ public:
 	virtual void Unregister(inputs key, inputs action);
 	virtual void Unregister() {}
 	virtual void AddImage(Image * item);
-	virtual void SetDimensions(double width, double height, double margin) {
+	virtual void SetDimensions(double width, double height) {
 		Control::SetDimensions(width, height);
-		this->margin = margin;
-		maxColumns = width / (imageWidth + (2 * margin));
-		maxRows = height / (imageHeight + (2 * margin));
+		maxColumns = static_cast<unsigned int>(width / (imageWidth + (2 * margin)));
+		maxRows = static_cast<unsigned int>(height / (imageHeight + (2 * margin)));
 	}
-
+	virtual Image * GetSelectedImage() {
+		if(selectedImage>-1){
+		return images[static_cast<uint32>(selectedImage)].item;
+		}
+		else {
+			return nullptr;
+		}
+	}
 	~ImageSelector() {};
 
 private:

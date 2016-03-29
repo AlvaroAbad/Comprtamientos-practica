@@ -6,7 +6,7 @@ class CollisionPixelData{
 public:
 	CollisionPixelData(const String& filename);
 	virtual~CollisionPixelData();
-	virtual bool IsValid()const { return data; };
+	virtual bool IsValid()const { return data!=NULL; };
 	virtual const String& GetFilename()const { return filename; }
 	virtual uint16 GetWidth()const { return width; }
 	virtual uint16 GetHeight()const {return height;}

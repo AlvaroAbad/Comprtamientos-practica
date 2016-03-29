@@ -16,9 +16,9 @@ void Button::Render()
 	}
 	else {
 		Renderer::Instance().DrawImage(currentImage, x, y, 0, width, height);
-		ResourceStore::Instance().GetMainFont()->Render(text, x + 10, y + height /2);
+		ResourceStore::Instance().GetMainFont()->Render(text, x + 10, y + height / 2);
 	}
-	
+
 }
 
 bool Button::OnInputEvent(const GUIMessage * message)
@@ -39,7 +39,9 @@ bool Button::OnInputEvent(const GUIMessage * message)
 		if (PointInRect(mousePressedButton->GetX(), mousePressedButton->GetY(), trueX, trueY, width, height)) {
 			currentImage = pressedImage;
 			used = true;
-			eventListener->OnClick(this);
+			if (eventListener) {
+				eventListener->OnClick(this);
+			}
 		}
 	}
 	break;

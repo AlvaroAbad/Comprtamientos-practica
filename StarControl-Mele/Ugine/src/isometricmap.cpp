@@ -14,11 +14,10 @@ IsometricMap::IsometricMap(const String & filename, uint16 firstColId) :Map(file
 	String attr;
 	xml_node<>* tileSet;
 	xml_node<>* tileOffSet;
-	xml_node<>* image;
 	xml_node<>* data;
 	xml_node<>* tile;
 
-	uint32 firstGId, tileWidth, tileHeight, x, y, imageW, imageH;
+	uint32 firstGId, tileWidth, tileHeight, x, y;
 	x = y = 0;
 
 	double handleX, handleY;

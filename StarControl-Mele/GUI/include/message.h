@@ -1,6 +1,8 @@
 #ifndef GUI_MESSAGE_H
 #define GUI_MESSAGE_H
 
+#pragma warning(disable:4514)
+
 class GUIMessage
 {
 public:
@@ -33,56 +35,56 @@ private:
 class ClickMessage : public GUIMessage
 {
 public:
-	ClickMessage(float x, float y) : x(x), y(y) { SetType(MOUSE_BUTTON_CLICK); }
+	ClickMessage(double x, double y) : x(x), y(y) { SetType(MOUSE_BUTTON_CLICK); }
 	~ClickMessage() {};
-	float GetX() const { return x; }
-	float GetY() const { return y; }
+	double GetX() const { return x; }
+	double GetY() const { return y; }
 private:
-	float  x, y;
+	double  x, y;
 };
 
 class MouseButtonPressedMessage : public GUIMessage
 {
 public:
-	MouseButtonPressedMessage(float x, float y) : x(x), y(y) { SetType(MOUSE_BUTTON_PRESS); }
+	MouseButtonPressedMessage(double x, double y) : x(x), y(y) { SetType(MOUSE_BUTTON_PRESS); }
 	~MouseButtonPressedMessage() {};
-	float GetX()const { return x; }
-	float GetY()const { return y; }
+	double GetX()const { return x; }
+	double GetY()const { return y; }
 private:
-	float x, y;
+	double x, y;
 };
 
 class MouseButtonReleassedMessage : public GUIMessage
 {
 public:
-	MouseButtonReleassedMessage(float x, float y) : x(x), y(y) { SetType(MOUSE_BUTTON_RELEASE); }
+	MouseButtonReleassedMessage(double x, double y) : x(x), y(y) { SetType(MOUSE_BUTTON_RELEASE); }
 	~MouseButtonReleassedMessage() {};
-	float GetX()const { return x; }
-	float GetY()const { return y; }
+	double GetX()const { return x; }
+	double GetY()const { return y; }
 private:
-	float x, y;
+	double x, y;
 };
 
 class MouseMovementMessage : public GUIMessage
 {
 public:
-	MouseMovementMessage(float x, float y) : x(x), y(y) { SetType(MOUSE_MOVE); }
+	MouseMovementMessage(double x, double y) : x(x), y(y) { SetType(MOUSE_MOVE); }
 	~MouseMovementMessage() {};
-	float GetX() const { return x; }
-	float GetY()const { return y; }
+	double GetX() const { return x; }
+	double GetY()const { return y; }
 private:
-	float x, y;
+	double x, y;
 };
 
 class DragMessage : public GUIMessage
 {
 public:
-	DragMessage(float x, float y) : x(x), y(y) { SetType(DRAG); }
+	DragMessage(double x, double y) : x(x), y(y) { SetType(DRAG); }
 	~DragMessage() {};
-	float GetX()const { return x; }
-	float GetY()const { return y; }
+	double GetX()const { return x; }
+	double GetY()const { return y; }
 private:
-	float x, y;
+	double x, y;
 };
 
 class KeyPressedMessage : public GUIMessage
@@ -90,7 +92,7 @@ class KeyPressedMessage : public GUIMessage
 public:
 	KeyPressedMessage(KeyCode key) : key(key){ SetType(KEY_PRESS); }
 	~KeyPressedMessage() {};
-	float GetKey()const { return key; }
+	int32 GetKey()const { return static_cast<int32>(key); }
 private:
 	KeyCode key;
 };

@@ -99,7 +99,6 @@ bool Sprite::CheckCollision(Sprite* sprite) {
 }
 
 bool Sprite::CheckCollision(const Map* map) {
-	uint32 rowTL, rowTR, rowBL,rowBR,colTL,colTR, colBL,colBR;
 	bool collisionTL, collisionTR, collisionBL, collisionBR;
 	collisionTL = collisionTR = collisionBL = collisionBR = false;
 	if (this->collision) {

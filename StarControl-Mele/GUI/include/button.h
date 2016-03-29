@@ -7,9 +7,9 @@
 class Button : public Control
 {
 public:
-	Button(String btnId, Image * activeImage, Image * pressedImage = nullptr, Image * hooverImage = nullptr, Image * disabledImage = nullptr) :Control(btnId),
+	Button(String * btnId, Image * activeImage, Image * pressedImage = nullptr, Image * hooverImage = nullptr, Image * disabledImage = nullptr) :Control(btnId),
 		currentImage(activeImage), activeImage(activeImage), pressedImage(pressedImage), disabledImage(disabledImage), hooverImage(hooverImage) {
-		bool hasFocus = false;
+		hasFocus = false;
 	}
 
 	virtual void Update();
@@ -24,7 +24,7 @@ public:
 	
 	~Button() {};
 
-private:
+protected:
 	Image * currentImage;
 	Image * activeImage;
 	Image * pressedImage;

@@ -9,7 +9,7 @@ public:
 		minVelocityX= maxVelocityX= minVelocityY= maxVelocityY = minAangularVelocity= maxAngularVelocity = minLifetime= maxLifetime = 0;
 	}
 	Affector(String id,double bound0X, double bound0Y, double bound1X, double bound1Y);
-	
+	virtual ~Affector() {};
 	virtual String getId(){ return this->id; }
 	virtual double getBound0X() { return this->bound0X; }
 	virtual double getBound0Y() { return this->bound0Y; }

@@ -50,8 +50,8 @@ void Scene::Update(double elapsed, Map* map) {
 	}
 
 	// Actualizamos colisiones
-    for ( int i = 0; i < LAYER_COUNT; i++ ) {
-        for ( int j = 0; j < (int)sprites[i].Size()-1; j++ ) {
+    for ( uint32 i = 0; i < LAYER_COUNT; i++ ) {
+        for (uint32 j = 0; j < static_cast<uint32>((int)sprites[i].Size()-1); j++ ) {
             for ( int k = j+1; k < (int)sprites[i].Size(); k++ ) {
                 sprites[i][j]->CheckCollision(sprites[i][k]);
             }

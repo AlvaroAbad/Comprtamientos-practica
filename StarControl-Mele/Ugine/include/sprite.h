@@ -59,10 +59,10 @@ public:
 			currentFrame = firstFrame;
 		}
 	}
-    virtual uint16 GetFirstFrame() const { return this->firstFrame;}
-    virtual uint16 GetLastFrame() { return this->lastFrame;}
+    virtual uint32 GetFirstFrame() const { return this->firstFrame;}
+    virtual uint32 GetLastFrame() { return this->lastFrame;}
 	virtual void SetCurrentFrame(uint16 frame) { this->currentFrame = frame;}
-    virtual uint16 GetCurrentFrame() const { return this->currentFrame;}
+    virtual uint32 GetCurrentFrame() const { return this->currentFrame;}
 
 	virtual void SetBlendMode(Renderer::BlendMode blend) { this->blendMode = blend;}
     virtual Renderer::BlendMode GetBlendMode() const { return this->blendMode;/* TAREA: Implementar */ }
@@ -110,7 +110,7 @@ private:
     double scalex, scaley;
     double radius;
     int16 animFPS;
-    uint16 firstFrame, lastFrame;
+    uint32 firstFrame, lastFrame;
     double currentFrame;
     Renderer::BlendMode blendMode;
     uint8 r, g, b, a;

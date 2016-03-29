@@ -39,7 +39,7 @@ Image::Image(const String &filename, uint16 hframes, uint16 vframes) {
 			uint64 bufferMargin = 0;
 			for (uint64 h = 0; h < height; h++)
 			{
-				for (uint64 w = 0; w < width * 4; w++)
+				for (uint64 w = 0; w < static_cast<uint64>(width * 4); w++)
 				{
 					newBuffer[w + newBuffermargin] = buffer[w + bufferMargin];
 				}

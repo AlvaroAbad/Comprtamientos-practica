@@ -12,7 +12,7 @@ Camera::Camera() {
 
 void Camera::Update()
 {
-	int nextX, nextY;
+	double nextX, nextY;
 	if (this->followingSprite) {
 
 		nextX = this->followingSprite->GetScreenX() - Screen::Instance().GetWidth() / 2;

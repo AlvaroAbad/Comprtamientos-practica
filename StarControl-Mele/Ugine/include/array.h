@@ -2,7 +2,8 @@
 #define UGINE_ARRAY_H
 
 #include "types.h"
-
+#pragma warning(disable:4710)
+#pragma warning(disable:4365)
 #define CAPACITY_INC 128
 
 template <typename T>

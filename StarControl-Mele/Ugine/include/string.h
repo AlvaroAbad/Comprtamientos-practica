@@ -2,6 +2,10 @@
 #define UGINE_STRING_H
 
 #pragma warning(disable:4996)
+#pragma warning(disable:4365)
+#pragma warning(disable:4244)
+#pragma warning(disable:4242)
+#pragma warning(disable:4706)
 #include "array.h"
 #include <ctype.h>
 #include <stdio.h>
@@ -40,10 +44,12 @@ public:
 
     int ToInt() const;
     float ToFloat() const;
-    const char* ToCString() const { return buffer; }
+    const char* ToCString() const { 
+		return buffer; 
+	}
 
     static String Chr(unsigned char val) { unsigned char c[] = {val, 0}; return String((char*)c); }
-    unsigned char Asc() const { return buffer[0]; }
+    unsigned char Asc() const { return static_cast<uint8>(buffer[0]); }
 
     String Left(int n) const;
     String Right(int n) const;

@@ -2,17 +2,25 @@
 #include "../../Ugine/include/resourcemanager.h"
 ResourceStore* ResourceStore::store = nullptr;
 
-ResourceStore & ResourceStore::Instance(){
+ResourceStore & ResourceStore::Instance() {
 	if (!store)
 		store = new ResourceStore();
 	return *store;
 }
 
-TTFFont * ResourceStore::GetMainFont(){
+TTFFont * ResourceStore::GetMainFont() {
 	if (!mainFont) {
 		mainFont = ResourceManager::Instance().LoadTTFFont(MAIN_FONT_DIR, 30);
 	}
 	return mainFont;
+}
+
+TTFFont * ResourceStore::GetDropDownFont()
+{
+	if (!dropdownFont) {
+		dropdownFont = ResourceManager::Instance().LoadTTFFont(MAIN_DROPDOWN_FONT_DIR, 12);
+	}
+	return dropdownFont;
 }
 
 Image * ResourceStore::GetMenuBackGround()
@@ -87,6 +95,47 @@ Image * ResourceStore::GetMenuButtonBackHooverImage()
 	return menuButtonBackHoover;
 }
 
+Image * ResourceStore::GetDropDownListButtonImage()
+{
+	if (!dropDownListButtonNeutral) {
+		dropDownListButtonNeutral = ResourceManager::Instance().LoadImage(MENU_DROPDOWNLIST_BUTTON_NEUTRAL_DIR);
+	}
+	return dropDownListButtonNeutral;
+}
+
+Image * ResourceStore::GetDropDownListButtonHooverImage()
+{
+	if (!dropDownListButtonHoover) {
+		dropDownListButtonHoover = ResourceManager::Instance().LoadImage(MENU_DROPDOWNLIST_BUTTON_BACK_HOOVER_DIR);
+	}
+	return dropDownListButtonHoover;
+}
+
+Image * ResourceStore::GetDropDownButtonImage()
+{
+
+	if (!dropDownButtonNeutral) {
+		dropDownButtonNeutral = ResourceManager::Instance().LoadImage(DROPDOWN_BUTTON_BACK_DIR);
+	}
+	return dropDownButtonNeutral;
+}
+
+Image * ResourceStore::GetDropDownButtonPressedImage()
+{
+	if (!dropDownButtonPressed) {
+		dropDownButtonPressed = ResourceManager::Instance().LoadImage(DROPDOWN_BUTTON_BACK_PRESSED_DIR);
+	}
+	return dropDownButtonPressed;
+}
+
+Image * ResourceStore::GetDropDownButtonHooverImage()
+{
+	if (!dropDownButtonHoover) {
+		dropDownButtonHoover = ResourceManager::Instance().LoadImage(DROPDOWN_BUTTON_BACK_HOOVER_DIR);
+	}
+	return dropDownButtonHoover;
+}
+
 Image * ResourceStore::GetAvatarImage()
 {
 	if (!avatar) {
@@ -103,5 +152,55 @@ Image * ResourceStore::GetDreadnoughtImage()
 	return dreadnought;
 }
 
-ResourceStore::~ResourceStore(){
+Image * ResourceStore::GetDroneImage(unsigned short int hFrames, unsigned short int vFrames)
+{
+	if (!drone) {
+		drone = ResourceManager::Instance().LoadImage(DRONE_DIR, hFrames, vFrames);
+	}
+	return drone;
+}
+
+Image * ResourceStore::GetExplosionImage(unsigned short int hFrames, unsigned short int vFrames, int explosion)
+{
+	switch (explosion)
+	{
+	case 0:
+	case 1:
+		return ResourceManager::Instance().LoadImage(SHIPEXPLOSION_DIR(explosion), hFrames, vFrames);
+		break;
+	}
+}
+
+Image * ResourceStore::GetImageSelectorImage()
+{
+	if (!imageSelector) {
+		imageSelector = ResourceManager::Instance().LoadImage(MENU_IMAGE_SELECTOR_DIR);
+	}
+	return imageSelector;
+}
+
+Image * ResourceStore::GetPlayer1Holder()
+{
+	if (!player1Holder) {
+		player1Holder = ResourceManager::Instance().LoadImage(MENU_PLAYER1_HOLDER_DIR);
+	}
+	return player1Holder;
+}
+Image * ResourceStore::GetPlayer2Holder()
+{
+	if (!player2Holder) {
+		player2Holder = ResourceManager::Instance().LoadImage(MENU_PLAYER2_HOLDER_DIR);
+	}
+	return player2Holder;
+}
+
+Image * ResourceStore::GetCapsuleImage()
+{
+	if (!capsule) {
+		capsule = ResourceManager::Instance().LoadImage(MENU_CAPSULE_DIR);
+	}
+	return capsule;
+}
+
+ResourceStore::~ResourceStore() {
 }

@@ -36,12 +36,6 @@
     <ClInclude Include="..\Ugine\include\audiostream.h">
       <Filter>Header Files\Ugine</Filter>
     </ClInclude>
-    <ClInclude Include="..\Ugine\include\bone.h">
-      <Filter>Header Files\Ugine</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Ugine\include\bonedata.h">
-      <Filter>Header Files\Ugine</Filter>
-    </ClInclude>
     <ClInclude Include="..\Ugine\include\camera.h">
       <Filter>Header Files\Ugine</Filter>
     </ClInclude>
@@ -121,12 +115,6 @@
       <Filter>Header Files\Ugine</Filter>
     </ClInclude>
     <ClInclude Include="..\Ugine\include\screen.h">
-      <Filter>Header Files\Ugine</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Ugine\include\skeletondata.h">
-      <Filter>Header Files\Ugine</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Ugine\include\skeletonsprite.h">
       <Filter>Header Files\Ugine</Filter>
     </ClInclude>
     <ClInclude Include="..\Ugine\include\sprite.h">
@@ -255,6 +243,48 @@
     <ClInclude Include="..\GUI\include\imageselector.h">
       <Filter>Header Files\GUI</Filter>
     </ClInclude>
+    <ClInclude Include="..\GUI\include\droplist.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\include\dropdownlistbutton.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="include\appstategame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\world.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\userinterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\entity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\include\statbar.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lvlManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GUI\include\imageholder.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="include\componentmessages.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\component.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\entityfactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gamecomponents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\GUI\src\ieventlistener.cpp">
@@ -353,12 +383,6 @@
     <ClCompile Include="..\Ugine\src\screen.cpp">
       <Filter>Source Files\Ugine</Filter>
     </ClCompile>
-    <ClCompile Include="..\Ugine\src\skeletondata.cpp">
-      <Filter>Source Files\Ugine</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Ugine\src\skeletonsprite.cpp">
-      <Filter>Source Files\Ugine</Filter>
-    </ClCompile>
     <ClCompile Include="..\Ugine\src\sprite.cpp">
       <Filter>Source Files\Ugine</Filter>
     </ClCompile>
@@ -375,9 +399,6 @@
       <Filter>Source Files\Ugine</Filter>
     </ClCompile>
     <ClCompile Include="..\Ugine\src\audiostream.cpp">
-      <Filter>Source Files\Ugine</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Ugine\src\bone.cpp">
       <Filter>Source Files\Ugine</Filter>
     </ClCompile>
     <ClCompile Include="..\Ugine\lib\stb_vorbis.c">
@@ -406,6 +427,42 @@
     </ClCompile>
     <ClCompile Include="..\GUI\src\imageselector.cpp">
       <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GUI\src\droplist.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GUI\src\dropdownlistbutton.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\appstategame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\world.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\userinterface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GUI\src\statbar.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lvlManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GUI\src\imageholder.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entityfactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gamecomponents.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

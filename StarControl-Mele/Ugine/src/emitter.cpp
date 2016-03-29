@@ -48,7 +48,7 @@ void Emitter::Update(double elapsed)
 		while (affectors.Size() > affector && particles[i].isAffectable()) {
 				if (particles[i].GetX() >= affectors[affector].getBound0X() && particles[i].GetX() <= affectors[affector].getBound1X()) {
 					if (particles[i].GetY() >= affectors[affector].getBound0Y() && particles[i].GetY() <= affectors[affector].getBound1Y()) {
-						double LifeTime;
+						double LifeTime=0;
 						if (affectors[affector].velocityXAffected()) {
 							particles[i].setVelocityX(affectors[affector].getVelocityX());
 						}

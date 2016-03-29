@@ -2,7 +2,7 @@
 
 void Menu::Update()
 {
-	for (int i = 0; i < childs.Size(); i++)
+	for (unsigned int i = 0; i < childs.Size(); i++)
 	{
 		childs[i]->Update();
 	}
@@ -19,7 +19,7 @@ void Menu::Render()
 			Renderer::Instance().DrawImage(image, x, y, 0, width, height);
 		}
 	}
-	for (int i = 0; i < childs.Size(); i++)
+	for (unsigned int i = 0; i < childs.Size(); i++)
 	{
 		childs[i]->Render();
 	}

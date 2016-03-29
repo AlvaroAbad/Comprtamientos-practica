@@ -7,6 +7,11 @@
 #include "../../InputManager/include/eventmanager.h"
 #include "../include/externs.h"
 
+AppStateMainMenu::~AppStateMainMenu()
+{
+	delete window;
+}
+
 void AppStateMainMenu::run()
 {
 	window->Update();
@@ -29,31 +34,35 @@ void AppStateMainMenu::activate()
 	Image * buttonPressImg = ResourceStore::Instance().GetMenuButtonPressedImage();
 	Image * buttonHooverImg = ResourceStore::Instance().GetMenuButtonHooverImage();
 	Image * buttonDisabledImg = ResourceStore::Instance().GetMenuButtonDisabledImage();
+	String id = "mMain";
 
 	window = new Window(background);
 	window->SetPosition(0, 0);
 	window->SetDimensions(width, height);
 
-	Menu * menu = new Menu("mMain", menuImg);
+	Menu * menu = new Menu(&id, menuImg);
 	menu->setPositionType(true);
 	menu->SetPosition(width / 2 - (menuImg->GetWidth() / 2), height / 2 - menuImg->GetHeight() / 2);
 	menu->SetDimensions(menuImg->GetWidth(), menuImg->GetHeight());
 
-	Button * buttonStart = new Button("btnStart", buttonImg, buttonPressImg, buttonHooverImg, buttonDisabledImg);
+	id = "btnStart";
+	Button * buttonStart = new Button(&id, buttonImg, buttonPressImg, buttonHooverImg, buttonDisabledImg);
 	buttonStart->setPositionType(true);
 	buttonStart->SetPosition(10, 50);
 	buttonStart->SetDimensions(menuImg->GetWidth() - 20, (menuImg->GetHeight() - 100) / 3);
 	buttonStart->SetText("Start");
 	menu->AddChild(buttonStart);
 
-	Button * buttonOpc = new Button("btnOpt", buttonImg, buttonPressImg, buttonHooverImg, buttonDisabledImg);
+	id = "btnOpt";
+	Button * buttonOpc = new Button(&id, buttonImg, buttonPressImg, buttonHooverImg, buttonDisabledImg);
 	buttonOpc->setPositionType(true);
 	buttonOpc->SetPosition(10, 60 + (menuImg->GetHeight() - 100) / 3);
 	buttonOpc->SetDimensions(menuImg->GetWidth() - 20, (menuImg->GetHeight() - 100) / 3);
 	buttonOpc->SetText("Options");
 	menu->AddChild(buttonOpc);
 
-	Button * buttonExit = new Button("btnExit", buttonImg, buttonPressImg, buttonHooverImg, buttonDisabledImg);
+	id = "btnExit";
+	Button * buttonExit = new Button(&id, buttonImg, buttonPressImg, buttonHooverImg, buttonDisabledImg);
 	buttonExit->setPositionType(true);
 	buttonExit->SetPosition(10, 70 + ((menuImg->GetHeight() - 100) / 3) * 2);
 	buttonExit->SetDimensions(menuImg->GetWidth() - 20, (menuImg->GetHeight() - 100) / 3);
@@ -89,7 +98,7 @@ void AppStateMainMenu::OnClick(Control * sender)
 	if (*(sender->GetId()) == "btnExit") {
 		whantedState = STATE_NULL;
 	}else if (*(sender->GetId()) == "btnOpt") {
-		whantedState = STATE_OPTIONS;
+		//whantedState = STATE_OPTIONS;
 	}else if (*(sender->GetId()) == "btnStart") {
 		whantedState = STATE_PREGAMEMENU;
 	}

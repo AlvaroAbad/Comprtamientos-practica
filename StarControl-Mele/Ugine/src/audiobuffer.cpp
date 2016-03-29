@@ -6,7 +6,7 @@
 #include "../lib/stb_vorbis.c"
 AudioBuffer::AudioBuffer(const String & filename)
 {
-	uint32 RiffChunkSize, FmtChunkSize, SampleRate, ByteRate, bufferSize, data;
+	uint32 RiffChunkSize, FmtChunkSize, SampleRate, ByteRate, bufferSize;
 	void * buffer;
 	char texto[5];
 	texto[4] = 0;

@@ -11,7 +11,7 @@ public:
 	virtual void Register(inputs key, inputs action);
 	virtual void Unregister(inputs key, inputs action);
 	virtual void Unregister() {}
-	Menu(String mId, Image * image) :Control(mId), image(image) {}
+	Menu(String * mId, Image * image) :Control(mId), image(image) {}
 	~Menu();
 
 private:

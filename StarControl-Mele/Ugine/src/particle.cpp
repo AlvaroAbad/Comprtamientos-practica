@@ -36,7 +36,7 @@ void Particle::Update(double elapsed)
 		else {
 			alpha = 0;
 		}
-		this->SetColor(this->GetRed(), this->GetGreen(), this->GetBlue(), alpha);
+		this->SetColor(this->GetRed(), this->GetGreen(), this->GetBlue(), static_cast<uint8>(alpha));
 	}
 	this->lifetime -= elapsed;
 	if (this->lifetime<=0) {

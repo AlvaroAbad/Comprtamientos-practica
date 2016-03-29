@@ -1,5 +1,6 @@
 #ifndef INPUTMANAGER_MOUSECONTROLLER_H
 #define INPUTMANAGER_MOUSECONTROLLER_H
+#pragma warning(disable:4514)
 class MouseController
 {
 public:

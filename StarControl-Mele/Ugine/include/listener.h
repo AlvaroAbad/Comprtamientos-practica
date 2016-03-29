@@ -1,7 +1,7 @@
 #ifndef UGINE_LISTENER_H
 #define UGINE_LISTENER_H
 #include "../lib/openal/AL/al.h"
-
+#pragma warning(disable:4514)
 class Listener {
 public:
 	static Listener& Instance();

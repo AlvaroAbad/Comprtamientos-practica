@@ -1,4 +1,5 @@
 #include "../../GUI/include/ieventlistener.h"
+#pragma warning (disable:4100)
 
 void IEventListener::OnClick(Control * sender)
 {

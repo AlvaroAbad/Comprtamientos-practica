@@ -1,6 +1,7 @@
 #ifndef UGINE_PARALLAXSCENE_H
 #define UGINE_PARALLAXSCENE_H
 #include "scene.h"
+#pragma warning(disable:4263)
 class ParallaxScene :public Scene {
 public:
 	ParallaxScene(Image* imageBack, Image* imageFront = 0);

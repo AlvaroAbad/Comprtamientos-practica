@@ -1,14 +1,17 @@
 #include "../include/appState.h"
 #include "../include/appstatemainmenu.h"
 #include "../include/appstatepregamemenu.h"
+#include "../include/appstategame.h"
 #include "../../Ugine/include/screen.h"
 #include "../../Ugine/include/renderer.h"
 #include "../../Ugine/include/resourcemanager.h"
 #include "../../InputManager/include/keyboardcontroller.h"
 #include "../../InputManager/include/mousecontroller.h"
+#include "../../InputManager/include/eventmanager.h"
+#include "../include/game.h"
 AppState *currentState = nullptr;
 appStates whantedState = STATE_MAINMENU;
-//Game *game = nullptr;
+Game *game = nullptr;
 AppState * newAppState(appStates state) {
 	switch (state)
 	{
@@ -18,8 +21,9 @@ AppState * newAppState(appStates state) {
 	case STATE_PREGAMEMENU:
 		return new AppStatePreGameMenu();
 		break;
-	/*case STATE_PAUSE:
-		return new AppStatePause();*/
+	case STATE_GAME:
+		return new AppStateGame();
+		break;
 	case STATE_NULL:
 	default:
 		return nullptr;
@@ -41,6 +45,7 @@ int main(int, char*) {
 			currentState = newAppState(whantedState);
 			currentState->activate();
 		}
+		EventManager::Instance().DispachEvents();
 		currentState->run();
 		currentState->draw();
 		currentState->getInputs();

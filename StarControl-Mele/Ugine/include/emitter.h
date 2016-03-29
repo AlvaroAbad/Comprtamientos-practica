@@ -5,6 +5,7 @@
 class Emitter {
 public:
 	Emitter(Image* image, bool autofade, uint32 particlesMaxAffectors =0);
+	virtual~Emitter() {};
 	virtual void SetPosition(double x, double y) {
 		this->x = x;
 		this->y = y;

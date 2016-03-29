@@ -1,6 +1,6 @@
 #ifndef UGINE_AUDIOENGINE_H
 #define UGINE_AUDIOENGINE_H
-
+#pragma warning (disable:4514)
 class AudioEngine {
 public:
 	static AudioEngine& Instance();

@@ -87,9 +87,10 @@
       </PrecompiledHeader>
       <WarningLevel>EnableAllWarnings</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>..\Ugine\lib\openal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessToFile>false</PreprocessToFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -151,10 +152,14 @@
   <ItemGroup>
     <ClInclude Include="..\GUI\include\button.h" />
     <ClInclude Include="..\GUI\include\control.h" />
+    <ClInclude Include="..\GUI\include\dropdownlistbutton.h" />
+    <ClInclude Include="..\GUI\include\droplist.h" />
     <ClInclude Include="..\GUI\include\ieventlistener.h" />
+    <ClInclude Include="..\GUI\include\imageholder.h" />
     <ClInclude Include="..\GUI\include\imageselector.h" />
     <ClInclude Include="..\GUI\include\menu.h" />
     <ClInclude Include="..\GUI\include\message.h" />
+    <ClInclude Include="..\GUI\include\statbar.h" />
     <ClInclude Include="..\GUI\include\window.h" />
     <ClInclude Include="..\InputManager\include\clic.h" />
     <ClInclude Include="..\InputManager\include\doubleclic.h" />
@@ -173,8 +178,6 @@
     <ClInclude Include="..\Ugine\include\audioengine.h" />
     <ClInclude Include="..\Ugine\include\audiosource.h" />
     <ClInclude Include="..\Ugine\include\audiostream.h" />
-    <ClInclude Include="..\Ugine\include\bone.h" />
-    <ClInclude Include="..\Ugine\include\bonedata.h" />
     <ClInclude Include="..\Ugine\include\camera.h" />
     <ClInclude Include="..\Ugine\include\circlecollision.h" />
     <ClInclude Include="..\Ugine\include\collision.h" />
@@ -202,8 +205,6 @@
     <ClInclude Include="..\Ugine\include\resourcemanager.h" />
     <ClInclude Include="..\Ugine\include\scene.h" />
     <ClInclude Include="..\Ugine\include\screen.h" />
-    <ClInclude Include="..\Ugine\include\skeletondata.h" />
-    <ClInclude Include="..\Ugine\include\skeletonsprite.h" />
     <ClInclude Include="..\Ugine\include\sprite.h" />
     <ClInclude Include="..\Ugine\include\stb_truetype.h" />
     <ClInclude Include="..\Ugine\include\string.h" />
@@ -219,17 +220,31 @@
     <ClInclude Include="..\Ugine\lib\openal\AL\efx.h" />
     <ClInclude Include="..\Ugine\lib\rapidxml.hpp" />
     <ClInclude Include="include\appState.h" />
+    <ClInclude Include="include\appstategame.h" />
     <ClInclude Include="include\appstatemainmenu.h" />
     <ClInclude Include="include\appstatepregamemenu.h" />
+    <ClInclude Include="include\component.h" />
+    <ClInclude Include="include\componentmessages.h" />
+    <ClInclude Include="include\entity.h" />
+    <ClInclude Include="include\entityfactory.h" />
     <ClInclude Include="include\externs.h" />
+    <ClInclude Include="include\game.h" />
+    <ClInclude Include="include\gamecomponents.h" />
+    <ClInclude Include="include\lvlManager.h" />
     <ClInclude Include="include\resourcestore.h" />
+    <ClInclude Include="include\userinterface.h" />
+    <ClInclude Include="include\world.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\GUI\src\button.cpp" />
     <ClCompile Include="..\GUI\src\control.cpp" />
+    <ClCompile Include="..\GUI\src\dropdownlistbutton.cpp" />
+    <ClCompile Include="..\GUI\src\droplist.cpp" />
     <ClCompile Include="..\GUI\src\ieventlistener.cpp" />
+    <ClCompile Include="..\GUI\src\imageholder.cpp" />
     <ClCompile Include="..\GUI\src\imageselector.cpp" />
     <ClCompile Include="..\GUI\src\menu.cpp" />
+    <ClCompile Include="..\GUI\src\statbar.cpp" />
     <ClCompile Include="..\GUI\src\window.cpp" />
     <ClCompile Include="..\InputManager\src\clic.cpp" />
     <ClCompile Include="..\InputManager\src\doubleclic.cpp" />
@@ -246,7 +261,6 @@
     <ClCompile Include="..\Ugine\src\audioengine.cpp" />
     <ClCompile Include="..\Ugine\src\audiosource.cpp" />
     <ClCompile Include="..\Ugine\src\audiostream.cpp" />
-    <ClCompile Include="..\Ugine\src\bone.cpp" />
     <ClCompile Include="..\Ugine\src\camera.cpp" />
     <ClCompile Include="..\Ugine\src\collisionmanager.cpp" />
     <ClCompile Include="..\Ugine\src\collisionpixeldata.cpp" />
@@ -267,14 +281,20 @@
     <ClCompile Include="..\Ugine\src\resourcemanager.cpp" />
     <ClCompile Include="..\Ugine\src\scene.cpp" />
     <ClCompile Include="..\Ugine\src\screen.cpp" />
-    <ClCompile Include="..\Ugine\src\skeletondata.cpp" />
-    <ClCompile Include="..\Ugine\src\skeletonsprite.cpp" />
     <ClCompile Include="..\Ugine\src\sprite.cpp" />
     <ClCompile Include="..\Ugine\src\ttffont.cpp" />
+    <ClCompile Include="src\appstategame.cpp" />
     <ClCompile Include="src\appstatemainmenu.cpp" />
     <ClCompile Include="src\appstatepregamemenu.cpp" />
+    <ClCompile Include="src\entity.cpp" />
+    <ClCompile Include="src\entityfactory.cpp" />
+    <ClCompile Include="src\game.cpp" />
+    <ClCompile Include="src\gamecomponents.cpp" />
+    <ClCompile Include="src\lvlManager.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\resourcestore.cpp" />
+    <ClCompile Include="src\userinterface.cpp" />
+    <ClCompile Include="src\world.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

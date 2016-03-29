@@ -7,6 +7,12 @@
 #include "../../InputManager/include/iregistrable.h"
 #include "message.h"
 #include "../../Ugine/include/string.h"
+
+#pragma warning(disable:4062)
+#pragma warning(disable:4514)
+#pragma warning(disable:4820)
+#pragma warning(disable:4100)
+
 class Control: public IRegistrable
 {
 public:
@@ -35,7 +41,8 @@ public:
 	virtual double GetWidth() { return width; }
 	virtual double GetHeight() { return height; }
 	String * GetId() { return &id; }
-	Control(String id) :id(id) {}
+	Control(String *id) :id(*id) {}
+	Control() :id("") {}
 	virtual ~Control();
 
 protected:
