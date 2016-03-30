@@ -36,6 +36,7 @@ int main(int, char*) {
 	mouseControler.Init();
 	KeyBoardController keybordControler;
 	keybordControler.Init();
+	srand(NULL);
 	while (whantedState) {
 		if (!currentState || currentState->getState() != whantedState) {
 			if (currentState) {

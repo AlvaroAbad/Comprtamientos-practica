@@ -130,7 +130,7 @@ void UserInterface::run()
 		lifeP2->SetValue(msgGLife.life);
 		world->playerTwo->ReciveMessage(&msgGEnergy);
 		energyP2->SetValue(msgGEnergy.energy);
-	}
+	} 
 	else {
 		lifeP2->SetValue(0);
 		energyP2->SetValue(0);

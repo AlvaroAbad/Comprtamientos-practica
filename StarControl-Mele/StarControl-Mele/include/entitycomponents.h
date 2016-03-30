@@ -1,5 +1,5 @@
-#ifndef SCM_GAMECOMPONENTS_H
-#define SCM_GAMECOMPONENTS_H
+#ifndef SCM_ENTITYCOMPONENTS_H
+#define SCM_ENTITYCOMPONENTS_H
 #include "component.h"
 #include "componentmessages.h"
 #include "../../InputManager/include/iregistrable.h"
@@ -105,15 +105,17 @@ private:
 };
 #pragma endregion insert when entity needs has a ship Explosion animation
 
-#pragma region COMPONENT_MISSILEWEAPON
-class ComponentMissileWeapon : public Component {
+#pragma region COMPONENT_WEAPON
+class ComponentWeapon : public Component {
 public:
-	ComponentMissileWeapon() {}
-	virtual ~ComponentMissileWeapon() {}
-	virtual void Update(float elapsed) {};
-	virtual void ReciveMessage(Message * message) {};
+	ComponentWeapon() :ready(true) {};
+	virtual ~ComponentWeapon();
+	virtual void Update(float elapsed);
+	virtual void ReciveMessage(Message * message);
 private:
+	bool ready;
+	Array<Component *> components;
 };
-#pragma endregion insert when entity has a missile weapon
-#endif // !SCM_GAMECOMPONENTS_H
+#pragma endregion insert when entity needs a weapon
+#endif // !SCM_ENTITYCOMPONENTS_H
 

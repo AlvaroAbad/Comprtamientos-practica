@@ -12,6 +12,7 @@ public:
 	void run();
 	void draw() const;
 	void getInput();
+	bool isGameEnd();
 private:
 	World * world;
 	UserInterface * ui;

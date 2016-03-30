@@ -17,10 +17,11 @@ public:
 	void run();
 	void draw();
 	~World();
-
+	bool isGameEnd() { return endGame; }
 private:
 	EntityFactory factory;
 	Array<Entity *> entities;
 	Entity * playerOne, *playerTwo;
+	bool endGame;
 };
 #endif // !SCM_WORLD_H

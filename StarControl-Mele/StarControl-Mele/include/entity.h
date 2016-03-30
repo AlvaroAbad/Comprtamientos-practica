@@ -10,7 +10,7 @@ class Entity
 public:
 	Entity(double x, double y, double width, double height, double rotation)
 		: x(x),y(y),width(width), height(height), rotation(rotation) {};
-	~Entity() {};
+	~Entity();
 	void Update(float elapsed);
 	void ReciveMessage(Message * message);
 	void AddComponent(Component * component);

@@ -22,6 +22,7 @@ void World::Init()
 	playerTwo->y = 400;
 	entities.Add(playerTwo);
 	entities.Add(factory.CreateDrone(20, 20, 0));
+	endGame = false;
 }
 
 void World::run()
@@ -35,12 +36,7 @@ void World::run()
 			dead.Add(entities[i]);
 		}
 	}
-	if (playerOne && playerOne->dead) {
-		playerOne = nullptr;
-	}
-	if (playerTwo && playerTwo->dead) {
-		playerTwo = nullptr;
-	}
+
 	MessageExplode msgExplode;
 	for (size_t i = 0; i < dead.Size(); i++)
 	{
@@ -49,9 +45,21 @@ void World::run()
 		dead[i]->ReciveMessage(&msgExplode);
 		if (msgExplode.entity) {
 			entities.Add(msgExplode.entity);
-		}
-		delete dead[i];
-		
+			if (dead[i] == playerOne) {
+				playerOne = msgExplode.entity;
+			}
+			else if (dead[i] == playerTwo) {
+				playerTwo = msgExplode.entity;
+			}
+		}		
+	}
+	if (playerOne && playerOne->dead) {
+		endGame = true;
+		playerOne = nullptr;
+	}
+	if (playerTwo && playerTwo->dead) {
+		endGame = true;
+		playerTwo = nullptr;
 	}
 	for (size_t i = 0; i < entities.Size()-1; i++)
 	{

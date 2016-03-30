@@ -1,4 +1,4 @@
-#include "../include/gamecomponents.h"
+#include "../include/entitycomponents.h"
 #include "../include/entity.h"
 #include "../include/entityfactory.h"
 
@@ -227,3 +227,37 @@ void ComponentShipExplosion::ReciveMessage(Message * message)
 	}
 }
 #pragma endregion insert when entity needs has a ship Explosion animation
+
+#pragma region COMPONENT_WEAPON
+ComponentWeapon::~ComponentWeapon()
+{
+	for (size_t i = 0; i < components.Size(); i++)
+	{
+		delete components[i];
+	}
+}
+
+void ComponentWeapon::Update(float elapsed)
+{
+	for (size_t i = 0; i < components.Size(); i++)
+	{
+		components[i]->Update(elapsed);
+	}
+}
+
+void ComponentWeapon::ReciveMessage(Message * message)
+{
+	if (message->type == Message::MSG_WEAPONREADY) {
+		ready = true;
+	}
+	else if (message->type == Message::MSG_FIRE) {
+		ready = false;
+		for (size_t i = 0; i < components.Size(); i++)
+		{
+			components[i]->ReciveMessage(message);
+		}
+	}
+	
+}
+#pragma endregion insert when entity needs a weapon
+

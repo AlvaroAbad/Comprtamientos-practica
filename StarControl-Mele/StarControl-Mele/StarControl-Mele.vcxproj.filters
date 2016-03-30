@@ -282,7 +282,13 @@
     <ClInclude Include="include\entityfactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\gamecomponents.h">
+    <ClInclude Include="include\entitycomponents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\weaponscomponents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\subcomponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -461,7 +467,10 @@
     <ClCompile Include="src\entityfactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\gamecomponents.cpp">
+    <ClCompile Include="src\entitycomponents.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\weaponscomponents.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

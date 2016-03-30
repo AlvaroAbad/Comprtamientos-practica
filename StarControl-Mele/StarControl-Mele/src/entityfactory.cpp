@@ -16,12 +16,13 @@ Entity * EntityFactory::CreatePlayerOne()
 	Image * ship = nullptr;
 	Document document;
 	String string;
+	const char * json;
 	float life, energy, eneryRegeneration;
 
 	/*Retive spaceshipdata*/
 	switch (LevelManager::Instance().GetPLayerOneSpaceShip())
 	{
-		const char * json;
+		
 	case LevelManager::AVATAR:
 		string = String::Read("../data/spaceships/avatar/data.cfg");
 		json = string.ToCString();
@@ -42,6 +43,14 @@ Entity * EntityFactory::CreatePlayerOne()
 		float linearVel, angularVel;
 	case LevelManager::HUMAN:
 	{
+		string = String::Read("../data/config/keybindings.cfg");
+		json = string.ToCString();
+
+		Document keybindings;
+		keybindings.Parse(json);
+
+		assert(keybindings.HasMember("Player1"));
+		assert(keybindings["Player1"].IsObject());
 
 		assert(document.HasMember("LinearVelocity"));
 		assert(document["LinearVelocity"].IsNumber());
@@ -54,7 +63,7 @@ Entity * EntityFactory::CreatePlayerOne()
 		angularVel = document["AngularVelocity"].GetFloat();
 
 		ComponentPlayerController * playerController = new ComponentPlayerController(linearVel, angularVel);
-		playerController->BinKeys(KEY_UP, KEY_DOWN, KEY_LEFT, KEY_RIGHT);
+		playerController->BinKeys(static_cast<inputs>(keybindings["Player1"]["UP"].GetInt()), static_cast<inputs>(keybindings["Player1"]["DOWN"].GetInt()), static_cast<inputs>(keybindings["Player1"]["RLEFT"].GetInt()), static_cast<inputs>(keybindings["Player1"]["RRIGHT"].GetInt()));
 		entity->AddComponent(playerController);
 	}
 	break;
@@ -100,11 +109,12 @@ Entity * EntityFactory::CreatePlayerTwo()
 	Image * ship = nullptr;
 	Document document;
 	String string;
+	const char * json;
 	float life, energy, eneryRegeneration;
 
 	switch (LevelManager::Instance().GetPLayerTwoSpaceShip())
 	{
-		const char * json;
+
 	case LevelManager::AVATAR:
 		string = String::Read("../data/spaceships/avatar/data.cfg");
 		json = string.ToCString();
@@ -124,6 +134,16 @@ Entity * EntityFactory::CreatePlayerTwo()
 		float linearVel, angularVel;
 	case LevelManager::HUMAN:
 	{
+		string = String::Read("../data/config/keybindings.cfg");
+		json = string.ToCString();
+
+		Document keybindings;
+
+		keybindings.Parse(json);
+
+		assert(keybindings.HasMember("Player2"));
+		assert(keybindings["Player2"].IsObject());
+
 		assert(document.HasMember("LinearVelocity"));
 		assert(document["LinearVelocity"].IsNumber());
 		assert(document["LinearVelocity"].IsFloat());
@@ -135,7 +155,7 @@ Entity * EntityFactory::CreatePlayerTwo()
 		angularVel = document["AngularVelocity"].GetFloat();
 
 		ComponentPlayerController * playerController = new ComponentPlayerController(linearVel, angularVel);
-		playerController->BinKeys(static_cast<inputs>(87), static_cast<inputs>(83), static_cast<inputs>(65), static_cast<inputs>(68));
+		playerController->BinKeys(static_cast<inputs>(keybindings["Player2"]["UP"].GetInt()), static_cast<inputs>(keybindings["Player2"]["DOWN"].GetInt()), static_cast<inputs>(keybindings["Player2"]["RLEFT"].GetInt()), static_cast<inputs>(keybindings["Player2"]["RRIGHT"].GetInt()));
 		entity->AddComponent(playerController);
 
 	}

@@ -1,11 +1,15 @@
 #include "..\include\appstategame.h"
 #include "../include/game.h"
 
+#include "../include/externs.h"
 extern Game *game;
 
 void AppStateGame::run()
 {
 	game->run();
+	if (game->isGameEnd()) {
+		whantedState = STATE_MAINMENU;
+	}
 }
 
 void AppStateGame::draw() const

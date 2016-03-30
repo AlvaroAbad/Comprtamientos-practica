@@ -28,3 +28,8 @@ void Game::getInput()
 {
 	ui->getInputs();
 }
+
+bool Game::isGameEnd()
+{
+	return world->isGameEnd();
+}

@@ -4,6 +4,14 @@
 
 #pragma warning(disable:4061)
 
+Entity::~Entity()
+{
+	for (size_t i = 0; i < components.Size(); i++)
+	{
+		delete components[i];
+	}
+}
+
 void Entity::Update(float elapsed)
 {
 	for (size_t i = 0; i < components.Size(); i++)

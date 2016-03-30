@@ -17,7 +17,9 @@ struct Message {
 		MSG_CHECKCOLLISION,
 		MSG_GCOLLIDER,
 		MSG_ALERTCOLLISION,
-		MSG_EXPLODE
+		MSG_EXPLODE,
+		MSG_WEAPONREADY,
+		MSG_FIRE
 	};
 	MessageType type;
 };
@@ -91,6 +93,11 @@ struct MessageExplode : public Message {
 		type = MSG_EXPLODE;
 	}
 	Entity * entity;
+};
+struct MessageSetWaponReady : public Message {
+	MessageSetWaponReady() {
+		type = MSG_WEAPONREADY;
+	}
 };
 #endif // !SCM_MESSAGES_H
 
