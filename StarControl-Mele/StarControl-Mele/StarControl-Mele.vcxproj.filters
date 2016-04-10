@@ -31,6 +31,18 @@
     <Filter Include="Source Files\Ugine">
       <UniqueIdentifier>{7617001f-a9cf-44e5-928f-43b11a02f6bf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\IA">
+      <UniqueIdentifier>{ca4c0165-8822-4fab-b153-1bd4b63e1c3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\IA">
+      <UniqueIdentifier>{84333417-fe3b-4ba0-8739-bacbc7358dd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\IA\Tasks">
+      <UniqueIdentifier>{e2597c2e-375a-4e2b-a9e0-f0bcf1edad9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\IA\Tasks">
+      <UniqueIdentifier>{a326095d-d949-4984-bf33-0d6963e6c069}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Ugine\include\audiostream.h">
@@ -291,6 +303,30 @@
     <ClInclude Include="include\subcomponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="IA\include\node.h">
+      <Filter>Header Files\IA</Filter>
+    </ClInclude>
+    <ClInclude Include="IA\include\selectornode.h">
+      <Filter>Header Files\IA</Filter>
+    </ClInclude>
+    <ClInclude Include="IA\include\sequencenode.h">
+      <Filter>Header Files\IA</Filter>
+    </ClInclude>
+    <ClInclude Include="tasknode.h">
+      <Filter>Header Files\IA\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="IA\include\treecontext.h">
+      <Filter>Header Files\IA</Filter>
+    </ClInclude>
+    <ClInclude Include="IA\tasks\include\checkthreattask.h">
+      <Filter>Header Files\IA\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="IA\tasks\include\calcrotationtask.h">
+      <Filter>Header Files\IA\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="IA\tasks\include\calcMovementtask.h">
+      <Filter>Header Files\IA\Tasks</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\GUI\src\ieventlistener.cpp">
@@ -472,6 +508,24 @@
     </ClCompile>
     <ClCompile Include="src\weaponscomponents.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IA\src\selectornode.cpp">
+      <Filter>Source Files\IA</Filter>
+    </ClCompile>
+    <ClCompile Include="IA\src\sequencenode.cpp">
+      <Filter>Source Files\IA</Filter>
+    </ClCompile>
+    <ClCompile Include="IA\src\treecontext.cpp">
+      <Filter>Source Files\IA</Filter>
+    </ClCompile>
+    <ClCompile Include="IA\tasks\src\checkthreattask.cpp">
+      <Filter>Source Files\IA\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="IA\tasks\src\calcrotationtask.cpp">
+      <Filter>Source Files\IA\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="IA\tasks\src\calcmovementtask.cpp">
+      <Filter>Source Files\IA\Tasks</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

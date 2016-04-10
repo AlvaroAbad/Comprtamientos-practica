@@ -3,14 +3,16 @@
 #include "../include/resourcestore.h"
 #include "../include/lvlManager.h"
 #include "../include/rapidjson/document.h"
-#include "../include/gamecomponents.h"
+#include "../include/entitycomponents.h"
+#include "../include/world.h"
 
 #include "../../Ugine/include/string.h"
 #include "../../Ugine/include/image.h"
+#include "../../Ugine/include/math.h"
 
 using namespace rapidjson;
 
-Entity * EntityFactory::CreatePlayerOne()
+Entity * EntityFactory::CreatePlayerOne(World * world)
 {
 	Entity * entity;
 	Image * ship = nullptr;
@@ -63,7 +65,14 @@ Entity * EntityFactory::CreatePlayerOne()
 		angularVel = document["AngularVelocity"].GetFloat();
 
 		ComponentPlayerController * playerController = new ComponentPlayerController(linearVel, angularVel);
-		playerController->BinKeys(static_cast<inputs>(keybindings["Player1"]["UP"].GetInt()), static_cast<inputs>(keybindings["Player1"]["DOWN"].GetInt()), static_cast<inputs>(keybindings["Player1"]["RLEFT"].GetInt()), static_cast<inputs>(keybindings["Player1"]["RRIGHT"].GetInt()));
+		playerController->BinKeys(
+			static_cast<inputs>(keybindings["Player1"]["UP"].GetInt()),
+			static_cast<inputs>(keybindings["Player1"]["DOWN"].GetInt()), 
+			static_cast<inputs>(keybindings["Player1"]["RLEFT"].GetInt()),
+			static_cast<inputs>(keybindings["Player1"]["RRIGHT"].GetInt()),
+			static_cast<inputs>(keybindings["Player1"]["FIREMAIN"].GetInt()),
+			static_cast<inputs>(keybindings["Player1"]["FIRESECONDARY"].GetInt())
+			);
 		entity->AddComponent(playerController);
 	}
 	break;
@@ -72,19 +81,10 @@ Entity * EntityFactory::CreatePlayerOne()
 		break;
 	}
 
-	assert(document.HasMember("Life"));
-	assert(document["Life"].IsNumber());
-	assert(document["Life"].IsFloat());
 	life = document["Life"].GetFloat();
 
-	assert(document.HasMember("Energy"));
-	assert(document["Energy"].IsNumber());
-	assert(document["Energy"].IsFloat());
 	energy = document["Energy"].GetFloat();
 
-	assert(document.HasMember("EnergyRegeneration"));
-	assert(document["EnergyRegeneration"].IsNumber());
-	assert(document["EnergyRegeneration"].IsFloat());
 	eneryRegeneration = document["EnergyRegeneration"].GetFloat();
 
 	ComponentStats * stats = new ComponentStats(life, energy, eneryRegeneration);
@@ -99,11 +99,28 @@ Entity * EntityFactory::CreatePlayerOne()
 	ComponentShipExplosion * explosion = new ComponentShipExplosion(this);
 	entity->AddComponent(explosion);
 
+	assert(document.HasMember("PrimaryWeapon"));
+	assert(document["PrimaryWeapon"].IsObject());
+	assert(document["PrimaryWeapon"].HasMember("Type"));
+	assert(document["PrimaryWeapon"]["Type"].IsString());
+
+	string = document["PrimaryWeapon"]["Type"].GetString();
+	if(string==String("LASER")){
+	ComponentLaserWeapon * weapon = new ComponentLaserWeapon(world,WT_MAIN, 
+		document["PrimaryWeapon"]["Cooldown"].GetDouble(), document["PrimaryWeapon"]["Damage"].GetDouble(),
+		document["PrimaryWeapon"]["EnergyConsumption"].GetDouble(), document["PrimaryWeapon"]["Range"].GetDouble());
+	entity->AddComponent(weapon);
+	}else if (string == String("MISSILE")) {
+		ComponentBalisticWeapon * weapon = new ComponentBalisticWeapon(world, this,WT_MAIN,
+			document["PrimaryWeapon"]["Cooldown"].GetDouble(), document["PrimaryWeapon"]["Damage"].GetDouble(),
+			document["PrimaryWeapon"]["EnergyConsumption"].GetDouble(), document["PrimaryWeapon"]["Speed"].GetDouble());
+		entity->AddComponent(weapon);
+	}
 	entityStore.Add(entity);
 	return entity;
 }
 
-Entity * EntityFactory::CreatePlayerTwo()
+Entity * EntityFactory::CreatePlayerTwo(World * world)
 {
 	Entity * entity;
 	Image * ship = nullptr;
@@ -140,22 +157,18 @@ Entity * EntityFactory::CreatePlayerTwo()
 		Document keybindings;
 
 		keybindings.Parse(json);
-
-		assert(keybindings.HasMember("Player2"));
-		assert(keybindings["Player2"].IsObject());
-
-		assert(document.HasMember("LinearVelocity"));
-		assert(document["LinearVelocity"].IsNumber());
-		assert(document["LinearVelocity"].IsFloat());
 		linearVel = document["LinearVelocity"].GetFloat();
-
-		assert(document.HasMember("AngularVelocity"));
-		assert(document["AngularVelocity"].IsNumber());
-		assert(document["AngularVelocity"].IsFloat());
 		angularVel = document["AngularVelocity"].GetFloat();
 
 		ComponentPlayerController * playerController = new ComponentPlayerController(linearVel, angularVel);
-		playerController->BinKeys(static_cast<inputs>(keybindings["Player2"]["UP"].GetInt()), static_cast<inputs>(keybindings["Player2"]["DOWN"].GetInt()), static_cast<inputs>(keybindings["Player2"]["RLEFT"].GetInt()), static_cast<inputs>(keybindings["Player2"]["RRIGHT"].GetInt()));
+		playerController->BinKeys(
+			static_cast<inputs>(keybindings["Player2"]["UP"].GetInt()),
+			static_cast<inputs>(keybindings["Player2"]["DOWN"].GetInt()),
+			static_cast<inputs>(keybindings["Player2"]["RLEFT"].GetInt()),
+			static_cast<inputs>(keybindings["Player2"]["RRIGHT"].GetInt()),
+			static_cast<inputs>(keybindings["Player2"]["FIREMAIN"].GetInt()),
+			static_cast<inputs>(keybindings["Player2"]["FIRESECONDARY"].GetInt())
+			);
 		entity->AddComponent(playerController);
 
 	}
@@ -165,19 +178,10 @@ Entity * EntityFactory::CreatePlayerTwo()
 		break;
 	}
 
-	assert(document.HasMember("Life"));
-	assert(document["Life"].IsNumber());
-	assert(document["Life"].IsFloat());
 	life = document["Life"].GetFloat();
 
-	assert(document.HasMember("Energy"));
-	assert(document["Energy"].IsNumber());
-	assert(document["Energy"].IsFloat());
 	energy = document["Energy"].GetFloat();
 
-	assert(document.HasMember("EnergyRegeneration"));
-	assert(document["EnergyRegeneration"].IsNumber());
-	assert(document["EnergyRegeneration"].IsFloat());
 	eneryRegeneration = document["EnergyRegeneration"].GetFloat();
 
 	ComponentStats * stats = new ComponentStats(life, energy, eneryRegeneration);
@@ -192,6 +196,20 @@ Entity * EntityFactory::CreatePlayerTwo()
 	ComponentShipExplosion * explosion = new ComponentShipExplosion(this);
 	entity->AddComponent(explosion);
 
+	string = document["PrimaryWeapon"]["Type"].GetString();
+	if (string == String("LASER")) {
+		ComponentLaserWeapon * weapon = new ComponentLaserWeapon(world, WT_MAIN,
+			document["PrimaryWeapon"]["Cooldown"].GetDouble(), document["PrimaryWeapon"]["Damage"].GetDouble(),
+			document["PrimaryWeapon"]["EnergyConsumption"].GetDouble(), document["PrimaryWeapon"]["Range"].GetDouble());
+		entity->AddComponent(weapon);
+	}
+	else if (string == String("MISSILE")) {
+		ComponentBalisticWeapon * weapon = new ComponentBalisticWeapon(world, this, WT_MAIN,
+			document["PrimaryWeapon"]["Cooldown"].GetDouble(), document["PrimaryWeapon"]["Damage"].GetDouble(),
+			document["PrimaryWeapon"]["EnergyConsumption"].GetDouble(), document["PrimaryWeapon"]["Speed"].GetDouble());
+		entity->AddComponent(weapon);
+	}
+
 	entityStore.Add(entity);
 	return entity;
 }
@@ -199,11 +217,9 @@ Entity * EntityFactory::CreateDrone(double x, double y, double rotation)
 {
 	Entity * entity;
 	Image * drone = nullptr;
-	Document document;
-	String string;
 	drone = ResourceStore::Instance().GetDroneImage(63, 1);
 	entity = new Entity(x, y, drone->GetWidth(), drone->GetHeight(), rotation);
-	ComponentRenderer * renderer = new ComponentRenderer(drone, 63, 30);
+	ComponentRenderer * renderer = new ComponentRenderer(drone,0, 63, 30);
 	entity->AddComponent(renderer);
 	entityStore.Add(entity);
 	return entity;
@@ -212,12 +228,46 @@ Entity * EntityFactory::CreateShipExplosion(double x, double y)
 {
 	Entity * entity;
 	Image * explosion = nullptr;
-	Document document;
-	String string;
-	explosion = ResourceStore::Instance().GetExplosionImage(20, 1, rand()%2);
+	explosion = ResourceStore::Instance().GetShipExplosionImage(20, 1, rand()%2);
 	entity = new Entity(x, y, explosion->GetWidth(), explosion->GetHeight(), 0);
-	ComponentRenderer * renderer = new ComponentRenderer(explosion, 20, 30,false);
+	ComponentRenderer * renderer = new ComponentRenderer(explosion,0, 20, 30,false);
 	entity->AddComponent(renderer);
+	entityStore.Add(entity);
+	return entity;
+}
+
+Entity * EntityFactory::CreateSmallExplosion(double x, double y)
+{
+	Entity * entity;
+	Image * explosion = nullptr;
+	explosion = ResourceStore::Instance().GetSmallExplosionImage();
+	entity = new Entity(x, y, explosion->GetWidth(), explosion->GetHeight(), 0);
+	ComponentRenderer * renderer = new ComponentRenderer(explosion, (rand() % 4)*10, 10, 30, false);
+	entity->AddComponent(renderer);
+	entityStore.Add(entity);
+	return entity;
+}
+
+Entity * EntityFactory::createMissile(double damage, double x, double y, double rotation, double linearSpeed)
+{
+	double trueX, trueY;
+	Entity * entity;
+	Image * missile = nullptr;
+	missile = ResourceStore::Instance().GetMissileImage();
+
+	trueX = x + DegCos(rotation-90) * missile->GetWidth() / 2;
+	x += x - trueX;
+	trueY = y - DegSin(rotation-90) * missile->GetHeight() / 2;
+	y += y - trueY;
+	entity = new Entity(x, y, missile->GetWidth(), missile->GetHeight(), rotation);
+	ComponentRenderer * renderer = new ComponentRenderer(missile,1,1,false);
+	entity->AddComponent(renderer);
+	ComponentLinearMovement * linearMovement = new ComponentLinearMovement(linearSpeed);
+	entity->AddComponent(linearMovement);
+	ComponentSmallExplosion * SmallExplosion = new ComponentSmallExplosion(this);
+	entity->AddComponent(SmallExplosion);
+	ComponentCircleCollision * collision = new ComponentCircleCollision(damage,true);
+	entity->AddComponent(collision);
 	entityStore.Add(entity);
 	return entity;
 }

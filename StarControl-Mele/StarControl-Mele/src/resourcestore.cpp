@@ -160,15 +160,26 @@ Image * ResourceStore::GetDroneImage(unsigned short int hFrames, unsigned short 
 	return drone;
 }
 
-Image * ResourceStore::GetExplosionImage(unsigned short int hFrames, unsigned short int vFrames, int explosion)
+Image * ResourceStore::GetShipExplosionImage(unsigned short int hFrames, unsigned short int vFrames, int explosion)
 {
-	switch (explosion)
-	{
-	case 0:
-	case 1:
 		return ResourceManager::Instance().LoadImage(SHIPEXPLOSION_DIR(explosion), hFrames, vFrames);
-		break;
+}
+
+Image * ResourceStore::GetSmallExplosionImage()
+{
+	if (!smallExplosion) {
+		smallExplosion= ResourceManager::Instance().LoadImage(SMALLEXPLOSION_DIR, 10, 4);
 	}
+	return smallExplosion;
+}
+
+Image * ResourceStore::GetMissileImage()
+{
+
+	if (!missile) {
+		missile = ResourceManager::Instance().LoadImage(MISSILE_DIR);
+	}
+	return missile;
 }
 
 Image * ResourceStore::GetImageSelectorImage()

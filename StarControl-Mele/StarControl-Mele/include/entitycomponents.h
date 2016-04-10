@@ -2,16 +2,23 @@
 #define SCM_ENTITYCOMPONENTS_H
 #include "component.h"
 #include "componentmessages.h"
+
 #include "../../InputManager/include/iregistrable.h"
+
+#include "../../Ugine/include/array.h" 
 
 #pragma region COMPONENT_RENDERER
 class Image;
-
+class World;
+enum Weapons_Type {
+	WT_MAIN,
+	WT_SECONDARY
+};
 class ComponentRenderer : public Component
 {
 public:
-	ComponentRenderer(Image * render, unsigned int frames = 1, unsigned int frameRate = 0,bool loop=true)
-		:render(render), frames(frames), frameRate(frameRate), loop(loop) {
+	ComponentRenderer(Image * render, unsigned int firstFrame = 0, unsigned int frames = 1, unsigned int frameRate = 0,bool loop=true)
+		:render(render), firstFrame(firstFrame), frames(frames), frameRate(frameRate), loop(loop) {
 		actualFrame = 0;
 	}
 	virtual ~ComponentRenderer() {};
@@ -21,7 +28,7 @@ public:
 
 private:
 	Image * render;
-	unsigned int frames, frameRate;
+	unsigned int firstFrame, frames, frameRate;
 	float actualFrame;
 	bool loop;
 };
@@ -34,8 +41,8 @@ public:
 	enum direction {
 		D_FORWARD=-1,
 		D_BACKWARDS=1,
-		D_LEFT=1,
-		D_RIGHT=-1,
+		D_LEFT=-1,
+		D_RIGHT=1,
 		D_HOLD=0
 	};
 	ComponentPlayerController(double linearSpeed, double angularSpeed)
@@ -45,7 +52,7 @@ public:
 	virtual ~ComponentPlayerController() {}
 	virtual void Update(float elapsed);
 	virtual void ReciveMessage(Message * message);
-	virtual void BinKeys(inputs forward, inputs backwards, inputs rotateLeft, inputs rotateRight);
+	virtual void BinKeys(inputs forward, inputs backwards, inputs rotateLeft, inputs rotateRight, inputs mainFire, inputs secondFire);
 	virtual void OnEvent(const Event *action);
 private:
 	virtual void Register(inputs key, inputs action);
@@ -53,7 +60,7 @@ private:
 	virtual void Unregister();
 
 	direction movement, rotation;
-	inputs forward, backwards, rotateLeft, rotateRight;
+	inputs forward, backwards, rotateLeft, rotateRight, mainFire, secondFire;
 	double linearSpeed, angularSpeed;
 };
 #pragma endregion insert when entity is controlled by user
@@ -105,17 +112,78 @@ private:
 };
 #pragma endregion insert when entity needs has a ship Explosion animation
 
-#pragma region COMPONENT_WEAPON
-class ComponentWeapon : public Component {
+#pragma region COMPONENT_SMALLXPLOSION
+class EntityFactory;
+class ComponentSmallExplosion : public Component {
 public:
-	ComponentWeapon() :ready(true) {};
-	virtual ~ComponentWeapon();
+	ComponentSmallExplosion(EntityFactory * factory) :factory(factory) {}
+	virtual ~ComponentSmallExplosion() {};
+	virtual void Update(float elapsed) {};
+	virtual void ReciveMessage(Message * message);
+private:
+	EntityFactory * factory;
+};
+#pragma endregion insert when entity needs has a small Explosion animation
+
+#pragma region COMPONENT_LINEARMOVEMENT
+class ComponentLinearMovement : public Component {
+public:
+	ComponentLinearMovement(double linearSpeed):linearSpeed(linearSpeed){};
+	virtual ~ComponentLinearMovement() {};
+	virtual void Update(float elapsed);
+	virtual void ReciveMessage(Message * message) {};
+private:
+	double linearSpeed;
+};
+#pragma endregion insert when entity has a simple linear movement
+
+#pragma region COMPONENT_MODULARWEAPON
+class ComponentModularWeapon : public Component {
+public:
+	ComponentModularWeapon() :ready(true) {};
+	virtual ~ComponentModularWeapon();
 	virtual void Update(float elapsed);
 	virtual void ReciveMessage(Message * message);
 private:
+	Weapons_Type type;
 	bool ready;
 	Array<Component *> components;
 };
-#pragma endregion insert when entity needs a weapon
+#pragma endregion insert when entity needs a modular weapon
+
+#pragma region COMPONENT_BALISTICWEAPON
+class ComponentBalisticWeapon : public Component {
+public:
+	ComponentBalisticWeapon(World * world, EntityFactory * factory,Weapons_Type type, double coolDown, double damage, double energyConsumption, double speed)
+		:ready(true), world(world), factory(factory), type(type), coolDown(coolDown), damage(damage), energyConsumption(energyConsumption), speed(speed){};
+	virtual ~ComponentBalisticWeapon() {};
+	virtual void Update(float elapsed);
+	virtual void ReciveMessage(Message * message);
+private:
+	Weapons_Type type;
+	bool ready;
+	double coolDown, damage, energyConsumption, speed;
+	float currentCoolDown;
+	EntityFactory * factory;
+	World * world;
+};
+#pragma endregion insert when entity needs a ballistic weapon
+
+#pragma region COMPONENT_LASERWEAPON
+class ComponentLaserWeapon : public Component {
+public:
+	ComponentLaserWeapon(World * world, Weapons_Type type, double coolDown, double damage, double energyConsumption, double range)
+		:ready(true), world(world), type(type), coolDown(coolDown), damage(damage), energyConsumption(energyConsumption), range(range) {};
+	virtual ~ComponentLaserWeapon() {};
+	virtual void Update(float elapsed);
+	virtual void ReciveMessage(Message * message);
+private:
+	Weapons_Type type;
+	bool ready;
+	double coolDown, damage, energyConsumption, range;
+	float currentCoolDown;
+	World * world;
+};
+#pragma endregion insert when entity needs a laser weapon
 #endif // !SCM_ENTITYCOMPONENTS_H
 

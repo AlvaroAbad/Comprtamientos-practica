@@ -42,8 +42,17 @@ void Entity::ReciveMessage(Message * message)
 		msgGTransform->width = width;
 		msgGTransform->height = height;
 	}
-	default:
-		break;
+	break;
+	case Message::MSG_FIRE:
+	{
+		MessageFire * msgFire = static_cast<MessageFire *>(message);
+		msgFire->x = x;
+		msgFire->y = y;
+		msgFire->width = width;
+		msgFire->height = height;
+		msgFire->rotation = rotation;
+	}
+	break;
 	}
 	for (size_t i = 0; i < components.Size(); i++)
 	{

@@ -30,7 +30,9 @@ public:
 	Image * GetAvatarImage();
 	Image * GetDreadnoughtImage();
 	Image * GetDroneImage(unsigned short int hFrames, unsigned short int vFrames);
-	Image * GetExplosionImage(unsigned short int hFrames, unsigned short int vFrames, int explosion);
+	Image * GetShipExplosionImage(unsigned short int hFrames, unsigned short int vFrames, int explosion);
+	Image * GetSmallExplosionImage();
+	Image * GetMissileImage();
 
 protected:
 	ResourceStore() {
@@ -64,6 +66,8 @@ private:
 	Image * avatar;
 	Image * dreadnought;
 	Image * drone;
+	Image * missile;
+	Image * smallExplosion;
 
 #define MAIN_FONT_DIR "../data/Fonts/spaceage.ttf"
 #define MAIN_DROPDOWN_FONT_DIR "../data/Fonts/DIGITALDREAM.ttf"
@@ -89,7 +93,10 @@ private:
 #define AVATAR_DIR "../data/spaceships/avatar/ship.png"
 #define DREADNOUGHT_DIR "../data/spaceships/dreadnought/ship.png"
 #define DRONE_DIR "../data/spaceships/dreadnought/drone.png"
+#define MISSILE_DIR "../data/spaceships/dreadnought/missile.png"
 #define SHIPEXPLOSION_DIR(explosion) String("../data/explosions/shipexplosion")+String::FromInt(explosion)+String(".png")
+#define SMALLEXPLOSION_DIR "../data/explosions/smallexplosions.png"
+
 };
 #endif // !SCM_RESOURCESSTORE_H
 

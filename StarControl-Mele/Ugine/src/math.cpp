@@ -1,8 +1,14 @@
 #include "math.h"
 #include <math.h>
+#include "..\include\math.h"
 
 #define DEG2RAD 0.0174532925
 #define RAD2DEG 57.2957795
+
+double sqroot(double x)
+{
+	return sqrt(x);
+}
 
 double Log2(double x) {
 	return log(x) / log(2.0);

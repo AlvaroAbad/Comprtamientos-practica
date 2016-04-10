@@ -6,6 +6,7 @@
 #include "../../Ugine/include/renderer.h"
 #include "../../Ugine/include/screen.h"
 #include "../../Ugine/include/image.h"
+#include "../../Ugine/include/math.h"
 
 World::World()
 {
@@ -13,22 +14,24 @@ World::World()
 
 void World::Init()
 {
-	playerOne = factory.CreatePlayerOne();
+	playerOne = factory.CreatePlayerOne(this);
 	playerOne->x = 400;
 	playerOne->y = 300;
 	entities.Add(playerOne);
-	playerTwo = factory.CreatePlayerTwo();
+	playerTwo = factory.CreatePlayerTwo(this);
 	playerTwo->x = 300;
 	playerTwo->y = 400;
 	entities.Add(playerTwo);
-	entities.Add(factory.CreateDrone(20, 20, 0));
+	//entities.Add(factory.CreateDrone(20, 20, 0));
 	endGame = false;
 }
 
 void World::run()
 {
 	Array<Entity *> dead;
+	/*Update Entities*/
 	MessageCheckCollision msgCCollision;
+	MessageCheckLaserCollision msgCLCollision;
 	for (size_t i = 0; i < entities.Size(); i++)
 	{
 		entities[i]->Update(Screen::Instance().ElapsedTime());
@@ -37,6 +40,8 @@ void World::run()
 		}
 	}
 
+
+	/*remove dead entities and generate Explosions*/
 	MessageExplode msgExplode;
 	for (size_t i = 0; i < dead.Size(); i++)
 	{
@@ -61,6 +66,8 @@ void World::run()
 		endGame = true;
 		playerTwo = nullptr;
 	}
+
+	/*Check collision between entities*/
 	for (size_t i = 0; i < entities.Size()-1; i++)
 	{
 		for (size_t j = i+1; j < entities.Size(); j++)
@@ -69,11 +76,35 @@ void World::run()
 			entities[i]->ReciveMessage(&msgCCollision);
 		}
 	}
+	/*check collision between lasers and entities*/
+	for (size_t i = 0; i < lasers.Size(); i++)
+	{
+		msgCLCollision.laser = &(lasers[i]);
+		for (size_t j = 0; j < entities.Size(); j++)
+		{
+			msgCLCollision.hit = false;
+			entities[j]->ReciveMessage(&msgCLCollision);
+			if (msgCLCollision.hit) {
+			entities.Add(factory.CreateSmallExplosion(msgCLCollision.hitX, msgCLCollision.hitY));
+				MessageReduceLife msgRLife;
+				msgRLife.damage = lasers[i].damage;
+				entities[j]->ReciveMessage(&msgRLife);
+			}
+		}
+	}
 }
 
 void World::draw()
 {
 	MessageGetRendering msgRendering;
+	Renderer::Instance().SetBlendMode(Renderer::ALPHA);
+	Renderer::Instance().SetColor(255, 255, 0, 255);
+	for (size_t i = 0; i < lasers.Size(); i++)
+	{
+		Renderer::Instance().DrawLine(lasers[i].oX, lasers[i].oY, lasers[i].dX, lasers[i].dY);
+	}
+	lasers.Clear();
+	Renderer::Instance().SetColor(255, 255, 255, 255);
 	for (size_t i = 0; i < entities.Size(); i++)
 	{
 		entities[i]->ReciveMessage(&msgRendering);

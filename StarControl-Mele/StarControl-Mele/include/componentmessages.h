@@ -3,8 +3,11 @@
 
 #pragma warning(disable:4820)
 
+#include "../include/world.h"
+
 class Image;
 class Collision;
+class Entity;
 
 struct Message {
 	enum MessageType {
@@ -13,13 +16,16 @@ struct Message {
 		MSG_REDUCEENERGY,
 		MSG_GLIFE,
 		MSG_GENERGY,
-		MSG_GTRANSFORM,
 		MSG_CHECKCOLLISION,
+		MSG_CHECKLASERCOLLISION,
 		MSG_GCOLLIDER,
 		MSG_ALERTCOLLISION,
 		MSG_EXPLODE,
 		MSG_WEAPONREADY,
-		MSG_FIRE
+		MSG_FIRE,
+		MSG_GETCLOSESTENEMY,
+		MSG_GETANGULARSPEED,
+		MSG_GETLINEARSPEED
 	};
 	MessageType type;
 };
@@ -63,18 +69,19 @@ struct MessageGetEnergy : public Message {
 	float energy;
 };
 
-struct MessageGetTransform : public Message {
-	MessageGetTransform() {
-		type = MSG_GTRANSFORM;
-	}
-	double x,y,width,height;
-};
-
 struct MessageCheckCollision : public Message {
 	MessageCheckCollision() {
 		type = MSG_CHECKCOLLISION;
 	}
 	Entity * entity;
+};
+struct MessageCheckLaserCollision : public Message {
+	MessageCheckLaserCollision() {
+		type = MSG_CHECKLASERCOLLISION;
+	}
+	World::Laser * laser;
+	bool hit;
+	double hitX, hitY;
 };
 struct MessageGetCollider : public Message {
 	MessageGetCollider() {
@@ -98,6 +105,40 @@ struct MessageSetWaponReady : public Message {
 	MessageSetWaponReady() {
 		type = MSG_WEAPONREADY;
 	}
+};
+struct MessageFire : public Message {
+	enum Weapon {
+		W_MAIN,
+		W_SECODARY
+	};
+	MessageFire() {
+		type = MSG_FIRE;
+	}
+	bool fire;
+	Weapon weapon;
+	double CurrentEnergy,energyConsumption, range, x, y, width, height, rotation;
+	Entity * o_shot;
+	
+};
+struct MessegGetColsestEnemy : public Message {
+	MessegGetColsestEnemy(){
+		type = MSG_GETCLOSESTENEMY;
+	}
+	Entity * o_enemie;
+	double o_distance;
+};
+
+struct MessageGetAngularSpeed : public Message {
+	MessageGetAngularSpeed(){
+		type = MSG_GETANGULARSPEED;
+	}
+	double o_speed;
+};
+struct MessageGetLinearSpeed : public Message {
+	MessageGetLinearSpeed() {
+		type = MSG_GETLINEARSPEED;
+	}
+	double o_speed;
 };
 #endif // !SCM_MESSAGES_H
 

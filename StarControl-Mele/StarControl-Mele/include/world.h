@@ -12,15 +12,25 @@ class World
 {
 	friend void UserInterface::run();
 public:
+	struct Laser {
+		Laser() {}
+		Laser(double oX, double oY, double dX, double dY, double damage, Entity * shooter) 
+			:oX(oX), oY(oY), dX(dX), dY(dY), damage(damage), shooter(shooter){}
+		double oX, oY, dX, dY, damage;
+		Entity * shooter;
+	};
 	World();
 	void Init();// create selected entities
 	void run();
 	void draw();
 	~World();
 	bool isGameEnd() { return endGame; }
+	void addEntity(Entity *entity) {entities.Add(entity);}
+	void addLaserRender(Laser laser) { lasers.Add(laser); }
 private:
 	EntityFactory factory;
 	Array<Entity *> entities;
+	Array<Laser> lasers;
 	Entity * playerOne, *playerTwo;
 	bool endGame;
 };
