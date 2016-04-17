@@ -137,6 +137,32 @@ private:
 };
 #pragma endregion insert when entity has a simple linear movement
 
+#pragma region COMPONENT_BEHAVIOUR
+class ABehaviouralTree;
+class ComponentBehaviour : public Component {
+public:
+	ComponentBehaviour(ABehaviouralTree * behaviour) :behaviour(behaviour) {};
+	virtual ~ComponentBehaviour() {};
+	virtual void Update(float elapsed);
+	virtual void ReciveMessage(Message * message) {};
+private:
+	ABehaviouralTree *behaviour;
+};
+#pragma endregion insert when entity is control by the IA
+
+#pragma region COMPONENT_SENSOR
+class ComponentSensor : public Component {
+public:
+	ComponentSensor(double lookAhead, double fieldOfView) :lookAhead(lookAhead), fieldOfView(fieldOfView) {};
+	virtual ~ComponentSensor(){};
+	virtual void Update(float elapsed);
+	virtual void ReciveMessage(Message * message) {};
+private:
+	double lookAhead;
+	double fieldOfView;
+};
+#pragma endregion insert when entity has a Sensor
+
 #pragma region COMPONENT_MODULARWEAPON
 class ComponentModularWeapon : public Component {
 public:

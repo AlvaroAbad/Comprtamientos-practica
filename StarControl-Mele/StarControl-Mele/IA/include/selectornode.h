@@ -11,7 +11,7 @@ public:
 	virtual void Init();
 	virtual bool initialized();
 	virtual TResult Run();
-	virtual void AddNode(ITreeNode * node);
+	virtual  ITreeNode * AddNode(ITreeNode * node);
 	
 private:
 	std::list<ITreeNode *> nodes;

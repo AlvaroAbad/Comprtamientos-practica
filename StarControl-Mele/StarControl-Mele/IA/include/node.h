@@ -10,7 +10,7 @@ public:
 	};
 	virtual void Init() = 0;
 	virtual TResult Run() = 0;
-	virtual void AddNode(ITreeNode * node) = 0;
+	virtual ITreeNode * AddNode(ITreeNode * node) = 0;
 	virtual bool initialized() = 0;
 };
 #endif // !SCM_IA_NODE_H

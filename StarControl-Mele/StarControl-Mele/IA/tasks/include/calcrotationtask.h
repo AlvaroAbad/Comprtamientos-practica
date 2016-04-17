@@ -12,6 +12,7 @@ public:
 	virtual TResult Run();
 private:
 	double angularSpeed;
+	double linearSpeed;
 };
 #endif // !SCM_IA_CALCROTATIONTASK_H
 

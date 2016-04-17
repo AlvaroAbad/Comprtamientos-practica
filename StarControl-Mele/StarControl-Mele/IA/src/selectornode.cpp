@@ -31,7 +31,8 @@ ITreeNode::TResult SelectorNode::Run()
 	return result;
 }
 
-void SelectorNode::AddNode(ITreeNode * node)
+ITreeNode * SelectorNode::AddNode(ITreeNode * node)
 {
 	nodes.push_back(node);
+	return this;
 }

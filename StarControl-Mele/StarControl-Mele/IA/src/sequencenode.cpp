@@ -31,7 +31,8 @@ ITreeNode::TResult SequenceNode::Run()
 	return result;
 }
 
-void SequenceNode::AddNode(ITreeNode * node)
+ITreeNode * SequenceNode::AddNode(ITreeNode * node)
 {
 	nodes.push_back(node);
+	return this;
 }

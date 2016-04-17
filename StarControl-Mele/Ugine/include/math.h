@@ -22,5 +22,20 @@ void ClosestPointToRect(double x, double y, double rectx, double recty, double w
 bool RectsOverlap(double x1, double y1, double width1, double height1, double x2, double y2, double width2, double height2);
 void OverlappingRect(double x1, double y1, double width1, double height1, double x2, double y2, double width2, double height2, double* outx, double* outy, double* outwidth, double* outheight);
 void TransformIsoCoords(double isoX, double isoY, double isoZ, double* screenX, double* screenY);
-
+struct Vec2D
+{
+	double x, y;
+	void normalize() {
+		float mod = sqroot((x*x) + (y*y));
+		x = x / mod;
+		y = y / mod;
+	}
+	double length() {
+		return sqroot((x*x) + (y*y));
+	}
+	double Dot(Vec2D projection) {
+		double angle = Angle(projection.x, projection.y, x, y);
+		return length()*projection.length()*DegCos(angle);
+	}
+};
 #endif

@@ -3,6 +3,8 @@
 #include "../include/entityfactory.h"
 #include "../include/world.h"
 
+#include "../IA/include/behaviouraltree.h"
+
 #include "../../InputManager/include/managergameinterface.h"
 
 #include "../../Ugine/include/math.h"
@@ -53,6 +55,10 @@ void ComponentPlayerController::Update(float elapsed)
 }
 void ComponentPlayerController::ReciveMessage(Message * message)
 {
+	if (message->type == Message::MSG_GETLINEARSPEED) {
+		CASTMESSAGE(MessageGetLinearSpeed)
+			msg->o_speed = linearSpeed;
+	}
 }
 
 void ComponentPlayerController::BinKeys(inputs forward, inputs backwards, inputs rotateLeft,
@@ -470,3 +476,16 @@ void ComponentLaserWeapon::ReciveMessage(Message * message)
 }
 #pragma endregion insert when entity has a laser weapon
 
+
+#pragma region COMPONENT_BEHAVIOUR
+void ComponentBehaviour::Update(float elapsed)
+{
+	behaviour->Run();
+}
+#pragma endregion insert when entity is control by the IA
+
+#pragma region COMPONENT_SENSOR
+void ComponentSensor::Update(float elapsed)
+{
+}
+#pragma endregion insert when entity has a Sensor

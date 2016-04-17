@@ -1,22 +1,20 @@
-#include "../include/calcrotationtask.h"
+#include "..\include\calcavoidancedestiny.h"
 #include "../../include\treecontext.h"
 
 #include "../../../include/componentmessages.h"
 #include "../../../include/entity.h"
 
 #include "../../../../Ugine/include/math.h"
-
-void CalculateRotationTask::Init()
+void CalculateAvoidanceDestiny::Init()
 {
-	MessageGetAngularSpeed msgGAngularSpeed;
-	owner->ReciveMessage(&msgGAngularSpeed);
-	angularSpeed = msgGAngularSpeed.o_speed;
+	MessageGetLinearSpeed msgGLinearSpeed;
+	owner->ReciveMessage(&msgGLinearSpeed);
+	linearSpeed = msgGLinearSpeed.o_speed;
 	isInitialized = true;
 }
 
-ITreeNode::TResult CalculateRotationTask::Run()
+ITreeNode::TResult CalculateAvoidanceDestiny::Run()
 {
-	TResult ret = E_SUCCESS;
 	Entity * enemy;
 	context->GetValueEntity(TreeContext::KEY_THREAT, &enemy);
 
@@ -28,8 +26,11 @@ ITreeNode::TResult CalculateRotationTask::Run()
 	threat.x = enemy->x - owner->x;
 	threat.y = enemy->y - owner->y;
 
-	projection = threat.Dot(direction);
+	projection=threat.Dot(direction);
 
 	direction.normalize();
-	return ret;
+
+
+	
+	return TResult();
 }

@@ -219,13 +219,17 @@
     <ClInclude Include="..\Ugine\lib\openal\AL\efx-presets.h" />
     <ClInclude Include="..\Ugine\lib\openal\AL\efx.h" />
     <ClInclude Include="..\Ugine\lib\rapidxml.hpp" />
+    <ClInclude Include="IA\include\behaviouraltree.h" />
+    <ClInclude Include="IA\include\dronebehaviouraltree.h" />
     <ClInclude Include="IA\include\node.h" />
     <ClInclude Include="IA\include\selectornode.h" />
     <ClInclude Include="IA\include\sequencenode.h" />
     <ClInclude Include="IA\include\treecontext.h" />
+    <ClInclude Include="IA\tasks\include\calcavoidancedestiny.h" />
     <ClInclude Include="IA\tasks\include\calcMovementtask.h" />
     <ClInclude Include="IA\tasks\include\calcrotationtask.h" />
     <ClInclude Include="IA\tasks\include\checkthreattask.h" />
+    <ClInclude Include="IA\tasks\include\tasknode.h" />
     <ClInclude Include="include\appState.h" />
     <ClInclude Include="include\appstategame.h" />
     <ClInclude Include="include\appstatemainmenu.h" />
@@ -243,7 +247,6 @@
     <ClInclude Include="include\userinterface.h" />
     <ClInclude Include="include\weaponscomponents.h" />
     <ClInclude Include="include\world.h" />
-    <ClInclude Include="tasknode.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\GUI\src\button.cpp" />
@@ -293,9 +296,12 @@
     <ClCompile Include="..\Ugine\src\screen.cpp" />
     <ClCompile Include="..\Ugine\src\sprite.cpp" />
     <ClCompile Include="..\Ugine\src\ttffont.cpp" />
+    <ClCompile Include="IA\src\dronebehaviouraltree.cpp" />
     <ClCompile Include="IA\src\selectornode.cpp" />
     <ClCompile Include="IA\src\sequencenode.cpp" />
     <ClCompile Include="IA\src\treecontext.cpp" />
+    <ClCompile Include="IA\tasks\include\calavoidancedestiny.cpp" />
+    <ClCompile Include="IA\tasks\src\calcavoidancedestiny.cpp" />
     <ClCompile Include="IA\tasks\src\calcmovementtask.cpp" />
     <ClCompile Include="IA\tasks\src\calcrotationtask.cpp" />
     <ClCompile Include="IA\tasks\src\checkthreattask.cpp" />

@@ -10,7 +10,7 @@ public:
 	ATaskNode(Entity * owner, TreeContext * context) :owner(owner), context(context) {}
 	virtual ~ATaskNode() {}
 	virtual bool initialized() { return isInitialized; }
-	virtual void AddNode(ITreeNode * node) {}
+	virtual  ITreeNode * AddNode(ITreeNode * node) {}
 	~ATaskNode();
 protected:
 	Entity * owner;

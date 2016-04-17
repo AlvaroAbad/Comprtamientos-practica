@@ -10,6 +10,8 @@
 #include "../../Ugine/include/image.h"
 #include "../../Ugine/include/math.h"
 
+#include "../IA/include/dronebehaviouraltree.h"
+
 using namespace rapidjson;
 
 Entity * EntityFactory::CreatePlayerOne(World * world)
@@ -77,7 +79,7 @@ Entity * EntityFactory::CreatePlayerOne(World * world)
 	}
 	break;
 	case  LevelManager::EASY:
-		//addIAcomponent
+		ComponentBehaviour *EasyIA= new ComponentBehaviour(new DroneBehaviouralTree(entity));
 		break;
 	}
 

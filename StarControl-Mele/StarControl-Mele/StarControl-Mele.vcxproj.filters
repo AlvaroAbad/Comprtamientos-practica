@@ -312,9 +312,6 @@
     <ClInclude Include="IA\include\sequencenode.h">
       <Filter>Header Files\IA</Filter>
     </ClInclude>
-    <ClInclude Include="tasknode.h">
-      <Filter>Header Files\IA\Tasks</Filter>
-    </ClInclude>
     <ClInclude Include="IA\include\treecontext.h">
       <Filter>Header Files\IA</Filter>
     </ClInclude>
@@ -326,6 +323,18 @@
     </ClInclude>
     <ClInclude Include="IA\tasks\include\calcMovementtask.h">
       <Filter>Header Files\IA\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="IA\tasks\include\calcavoidancedestiny.h">
+      <Filter>Header Files\IA\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="IA\include\dronebehaviouraltree.h">
+      <Filter>Header Files\IA</Filter>
+    </ClInclude>
+    <ClInclude Include="IA\tasks\include\tasknode.h">
+      <Filter>Header Files\IA\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="IA\include\behaviouraltree.h">
+      <Filter>Header Files\IA</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -526,6 +535,15 @@
     </ClCompile>
     <ClCompile Include="IA\tasks\src\calcmovementtask.cpp">
       <Filter>Source Files\IA\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="IA\tasks\src\calcavoidancedestiny.cpp">
+      <Filter>Source Files\IA\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="IA\tasks\include\calavoidancedestiny.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IA\src\dronebehaviouraltree.cpp">
+      <Filter>Source Files\IA</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
